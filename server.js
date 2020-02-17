@@ -1,10 +1,12 @@
-const { _checkLogin } = require('./connexion.js')
+const  _checkLogin = require('./connexion.js')
 
-var net = require("net");
+const express = require('express')
+const app = express()
 
-var server = net.createServer(function (socket) {
-	socket.write('Echo server');
-	socket.pipe(socket)
-});
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
 
-server.listen(8080, '127.0.0.1');
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
+})

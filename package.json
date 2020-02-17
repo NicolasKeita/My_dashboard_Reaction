@@ -1,0 +1,21 @@
+{
+  "name": "dev_area_2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config_firebase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.epitech.eu:/noah.farjon@epitech.eu/DEV_area_2019"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "expressjs": "^1.0.1",
+    "firebase": "^7.8.2"
+  }
+}
