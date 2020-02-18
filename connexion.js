@@ -4,8 +4,8 @@ const _checkLogin = (email, password) => {
 	fire
 		.auth()
 		.signInWithEmailAndPassword(email, password)
-		.then(() => res.send('nice'))
-		.catch(error => res.send('fail'))
+		.then(() => {return "succes"})
+		.catch(error => {return "fail"} )
 }
 
 module.exports = _checkLogin
