@@ -22,12 +22,11 @@ app.delete('/', (req, res) => {
   return res.send('Received a DELETE HTTP method');
 });
 
-app.post('/users', (req, res) => {
+app.post('/users', async (req, res) => {
 	//console.log(req)
- 	const result = _checkLogin(req.body.email, req.body.password)
+ 	const result = await _checkLogin(req.body.email, req.body.password, res)
 
-	console.log(result)
-	res.send("succes")
+	res.send(result)
   //return res.send(_checkLogin(req.body.email, req.body.password));
 });
 
