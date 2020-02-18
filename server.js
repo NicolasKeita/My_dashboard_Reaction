@@ -27,7 +27,7 @@ app.post('/users', (req, res) => {
  	const result = _checkLogin(req.body.email, req.body.password)
 
 	console.log(result)
-	res.send(result)
+	res.send("succes")
   //return res.send(_checkLogin(req.body.email, req.body.password));
 });
 
