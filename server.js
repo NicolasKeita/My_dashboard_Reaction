@@ -1,4 +1,6 @@
 const  _checkLogin = require('./connexion.js')
+const  _checkRegister = require('./register.js')
+
 
 const express = require('express')
 const app = express()
@@ -27,6 +29,14 @@ app.delete('/', (req, res) => {
 app.post('/users', async (req, res) => {
 	//console.log(req)
  	const result = await _checkLogin(req.body.email, req.body.password)
+
+	res.send(result)
+  //return res.send(_checkLogin(req.body.email, req.body.password));
+});
+
+app.post('/register', async (req, res) => {
+	//console.log(req)
+ 	const result = await _checkRegister(req.body.email, req.body.password)
 
 	res.send(result)
   //return res.send(_checkLogin(req.body.email, req.body.password));
