@@ -16,15 +16,6 @@ app.use(body.urlencoded({
 app.get('/', (req, res) => {
   return res.send('Received a GET HTTP method');
 });
-app.post('/', (req, res) => {
-  return res.send('Received a POST HTTP method');
-});
-app.put('/', (req, res) => {
-  return res.send('Received a PUT HTTP method');
-});
-app.delete('/', (req, res) => {
-  return res.send('Received a DELETE HTTP method');
-});
 
 app.post('/users', async (req, res) => {
 	//console.log(req)
@@ -42,23 +33,37 @@ app.post('/register', async (req, res) => {
   //return res.send(_checkLogin(req.body.email, req.body.password));
 });
 
-/*app.get('/deezer', (req, res) => {
+app.get('/pictures', (req, res) => {
     const options = {
-            url: 'https://www.reddit.com/r/funny.json',
+            url: ' https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY ',
             method: 'GET',
             headers: {
-                'Accept': 'application/json',
-                'Accept-Charset': 'utf-8',
-                'User-Agent': 'my-reddit-client'
+                'api_key': 'TbofUQJC5HtgwnLV2w0TgNHhcN9tSQOsFpRWnz1x'
             }
         };
 
         request(options, function(err, resB, body) {
             let json = JSON.parse(body);
-            console.log(json);
             res.send(json)
         });
-});*/
+});
+
+app.get('/mars', (req, res) => {
+    const options = {
+            url: 'https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0',
+            method: 'GET',
+            headers: {
+                'version': '1.0',
+                'feedtype': 'json',
+                'api_key': 'TbofUQJC5HtgwnLV2w0TgNHhcN9tSQOsFpRWnz1x'
+            }
+        };
+
+        request(options, function(err, resB, body) {
+            let json = JSON.parse(body);
+            res.send(json)
+        });
+});
 
 app.get('/bitcoin', (req, res) => {
     var reqB = unirest("GET", "https://bravenewcoin-v1.p.rapidapi.com/convert");
