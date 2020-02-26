@@ -18,6 +18,8 @@
     "express": "^4.17.1",
     "expressjs": "^1.0.1",
     "firebase": "^7.8.2",
-    "mongoose": "^5.9.1"
+    "mongoose": "^5.9.1",
+    "request": "^2.88.2",
+    "unirest": "^0.6.0"
   }
 }
