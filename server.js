@@ -18,24 +18,14 @@ app.get('/', (req, res) => {
 });
 
 app.post('/users', async (req, res) => {
-	//console.log(req)
  	const result = await _checkLogin(req.body.email, req.body.password)
-
 	res.send(result)
-  //return res.send(_checkLogin(req.body.email, req.body.password));
 });
 
 app.post('/register', async (req, res) => {
-	//console.log(req)
  	const result = await _checkRegister(req.body.email, req.body.password)
-
 	res.send(result)
-  //return res.send(_checkLogin(req.body.email, req.body.password));
 });
-
-//45f4bc4d0a4abe2a27ec5d80c8a863e3
-
-//c7b1ebc16a3e174053ac7adccdd43845584c377ff64a04176d804a37dfabd042
 
 app.get('/trello', (req, res) => {
     const options = {
@@ -77,6 +67,74 @@ app.get('/mars', (req, res) => {
                 'feedtype': 'json',
                 'api_key': 'TbofUQJC5HtgwnLV2w0TgNHhcN9tSQOsFpRWnz1x'
             }
+        };
+
+        request(options, function(err, resB, body) {
+            let json = JSON.parse(body);
+            res.send(json)
+        });
+});
+
+app.get('/weather', (req, res) => {
+    const options = {
+            url: 'http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=cb83efa1ba66096f8743aba2474495cc',
+            method: 'GET',
+        };
+
+        request(options, function(err, resB, body) {
+            let json = JSON.parse(body);
+            res.send(json)
+        });
+});
+
+app.get('/time', (req, res) => {
+    const options = {
+            url: 'http://worldclockapi.com/api/json/est/now',
+            method: 'GET',
+        };
+
+        request(options, function(err, resB, body) {
+            let json = JSON.parse(body);
+            res.send(json)
+        });
+});
+
+app.get('/pollution', (req, res) => {
+    const options = {
+            url: ' http://www.airparif.asso.fr/services/api/1.1/indiceJour?date=jour',
+            method: 'GET',
+        };
+
+        request(options, function(err, resB, body) {
+            let json = JSON.parse(body);
+            res.send(json)
+        });
+});
+
+
+app.get('/lol', (req, res) => {
+    const options = {
+            url: 'https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key=RGAPI-7a7d52be-f26f-4714-8366-b31c092437bb',
+            method: 'GET',
+            headers: {
+                "Origin": "https://developer.riotgames.com",
+                "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
+                "X-Riot-Token": "RGAPI-7a7d52be-f26f-4714-8366-b31c092437bb",
+                "Accept-Language": "en-US,en;q=0.5",
+                "User-Agent": "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0"
+            }
+        };
+
+        request(options, function(err, resB, body) {
+            let json = JSON.parse(body);
+            res.send(json)
+        });
+});
+
+app.get('/steamNews', (req, res) => {
+    const options = {
+            url: 'https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=440&count=3',
+            method: 'GET',
         };
 
         request(options, function(err, resB, body) {
