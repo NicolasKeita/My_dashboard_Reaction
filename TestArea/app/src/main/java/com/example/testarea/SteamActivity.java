@@ -1,19 +1,13 @@
 package com.example.testarea;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -21,7 +15,6 @@ import org.json.JSONObject;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
 public class SteamActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -38,18 +31,18 @@ public class SteamActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_steam);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        title1 = (TextView) findViewById(R.id.title1_id);
-        url1 = (TextView) findViewById(R.id.url1_id);
-        title2 = (TextView) findViewById(R.id.title2_id);
-        url2 = (TextView) findViewById(R.id.url2_id);
-        title3 = (TextView) findViewById(R.id.title3_id);
-        url3 = (TextView) findViewById(R.id.url3_id);
+        title1 = findViewById(R.id.title1_id);
+        url1 = findViewById(R.id.url1_id);
+        title2 = findViewById(R.id.title2_id);
+        url2 = findViewById(R.id.url2_id);
+        title3 = findViewById(R.id.title3_id);
+        url3 = findViewById(R.id.url3_id);
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
                 .url("http://10.0.2.2:3000/steamNews")
                 .build();
-        Response response = null;
+        Response response;
         try {
             response = httpClient.newCall(request).execute();
             String jsonData = response.body().string();
