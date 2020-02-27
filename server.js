@@ -33,6 +33,26 @@ app.post('/register', async (req, res) => {
   //return res.send(_checkLogin(req.body.email, req.body.password));
 });
 
+//45f4bc4d0a4abe2a27ec5d80c8a863e3
+
+//c7b1ebc16a3e174053ac7adccdd43845584c377ff64a04176d804a37dfabd042
+
+app.get('/trello', (req, res) => {
+    const options = {
+            url: 'https://api.trello.com/1/members/me/boards?key=45f4bc4d0a4abe2a27ec5d80c8a863e3&token=c7b1ebc16a3e174053ac7adccdd43845584c377ff64a04176d804a37dfabd042',
+            method: 'GET',
+            headers: {
+                'key': '45f4bc4d0a4abe2a27ec5d80c8a863e3',
+                'token': 'c7b1ebc16a3e174053ac7adccdd43845584c377ff64a04176d804a37dfabd042'
+            }
+        };
+
+        request(options, function(err, resB, body) {
+            let json = JSON.parse(body);
+            res.send(json)
+        });
+});
+
 app.get('/pictures', (req, res) => {
     const options = {
             url: ' https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY ',
