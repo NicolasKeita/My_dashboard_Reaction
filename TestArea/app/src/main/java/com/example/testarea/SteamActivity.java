@@ -1,16 +1,20 @@
 package com.example.testarea;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.util.Objects;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -25,6 +29,7 @@ public class SteamActivity extends AppCompatActivity implements View.OnClickList
     private TextView title3;
     private TextView url3;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +50,7 @@ public class SteamActivity extends AppCompatActivity implements View.OnClickList
         Response response;
         try {
             response = httpClient.newCall(request).execute();
-            String jsonData = response.body().string();
+            String jsonData = Objects.requireNonNull(response.body()).string();
             JSONObject object = new JSONObject(jsonData);
             JSONObject object2 = object.getJSONObject("appnews");
             JSONArray object3 = object2.getJSONArray("newsitems");
