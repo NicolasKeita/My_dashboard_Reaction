@@ -57,13 +57,19 @@ public class SteamActivity extends AppCompatActivity implements View.OnClickList
             JSONObject subObject1 = (JSONObject) object3.get(0);
             JSONObject subObject2 = (JSONObject) object3.get(1);
             JSONObject subObject3 = (JSONObject) object3.get(2);
-            title1.setText("Title : "+subObject1.getString("title"));
-            title2.setText("Title : "+subObject2.getString("title"));
-            title3.setText("Title : "+subObject3.getString("title"));
-            url1.setText("URL : "+subObject1.getString("url"));
-            url2.setText("URL : "+subObject2.getString("url"));
-            url3.setText("URL : "+subObject3.getString("url"));
-        } catch (Exception e) {
+            String title1Split = "Title : " + subObject1.getString("title");
+            String title2Split = "Title : " + subObject2.getString("title");
+            String title3Split = "Title : " + subObject3.getString("title");
+            title1.setText(title1Split);
+            title2.setText(title2Split);
+            title3.setText(title3Split);
+            String url1Split = "URL : " + subObject1.getString("url");
+            String url2Split = "URL : " + subObject2.getString("url");
+            String url3Split = "URL : " + subObject3.getString("url");
+            url1.setText(url1Split);
+            url2.setText(url2Split);
+            url3.setText(url3Split);
+        } catch (Exception ignored) {
         }
         Thread t=new Thread(){
 
