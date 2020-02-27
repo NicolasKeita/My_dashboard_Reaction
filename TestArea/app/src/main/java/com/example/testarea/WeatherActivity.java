@@ -1,39 +1,37 @@
 package com.example.testarea;
 
-import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.Objects;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
 public class WeatherActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView weather;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        weather = (TextView) findViewById(R.id.weather_id);
+        weather = findViewById(R.id.weather_id);
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
@@ -42,13 +40,13 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
         Response response = null;
         try {
             response = httpClient.newCall(request).execute();
-            String jsonData = response.body().string();
+            String jsonData = Objects.requireNonNull(response.body()).string();
             JSONObject object = new JSONObject(jsonData);
             JSONArray object2 = object.getJSONArray("weather");
             JSONObject subObject = (JSONObject) object2.get(0);
             String status = subObject.getString("main");
-            weather.setText("Current weather at Paris: "+status);
-        } catch (Exception e) {
+            weather.setText("Current weather at Paris: " + status);
+        } catch (Exception ignored) {
         }
         Thread t=new Thread(){
 
@@ -65,13 +63,13 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
                                 //request
                                 try {
                                     Response response = httpClient.newCall(request).execute();
-                                    String jsonData = response.body().string();
+                                    String jsonData = Objects.requireNonNull(response.body()).string();
                                     JSONObject object = new JSONObject(jsonData);
                                     JSONArray object2 = object.getJSONArray("weather");
                                     JSONObject subObject = (JSONObject) object2.get(0);
                                     String status = subObject.getString("main");
-                                    weather.setText("Current weather at Paris: "+status);
-                                } catch (Exception e) {
+                                    weather.setText("Current weather at Paris: " + status);
+                                } catch (Exception ignored) {
                                 }
                             }
                         });
