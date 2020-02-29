@@ -1059,8 +1059,13 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnRegister
 id btnSubmit
+id buttonBitcoin
+id buttonLol
+id buttonNY
 id buttonPanel
+id buttonWeather
 id center
 id center_horizontal
 id center_vertical
@@ -1086,6 +1091,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id dispBitcoin
 id editTextMail
 id editTextMdp
 id edit_query
@@ -1122,6 +1128,8 @@ id line1
 id line3
 id listMode
 id list_item
+id lolRegion
+id lolStatus
 id masked
 id message
 id middle
@@ -1136,6 +1144,8 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id ny_day
+id ny_time
 id outline
 id packed
 id parallax
@@ -1201,6 +1211,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textViewMail
 id textViewMdp
 id text_input_password_toggle
@@ -1226,6 +1237,7 @@ id up
 id useLogo
 id view_offset_helper
 id visible
+id weather_id
 id withText
 id wrap
 id wrap_content
@@ -1276,10 +1288,19 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_bitcoin
+layout activity_lol
 layout activity_main
+layout activity_ny
 layout activity_second
+layout activity_weather
+layout content_bitcoin
+layout content_lol
 layout content_main
+layout content_ny
+layout content_register
 layout content_second
+layout content_weather
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1302,6 +1323,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout register_main
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1365,6 +1387,10 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_bitcoin
+string title_activity_lol
+string title_activity_ny
+string title_activity_weather
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

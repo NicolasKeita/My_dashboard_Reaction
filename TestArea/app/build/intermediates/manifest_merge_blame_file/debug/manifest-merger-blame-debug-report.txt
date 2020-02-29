@@ -6,63 +6,104 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="15"
-8-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml
+8-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml
+9-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:5:5-67
-11-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:5:22-64
+11-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:6:5-79
-12-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:6:22-76
+12-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:6:5-79
+12-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:6:22-76
 13
 14    <application
-14-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:8:5-28:19
+14-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:8:5-50:19
 15        android:allowBackup="true"
-15-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:9:9-35
+15-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.0.1] /home/lrolland/.gradle/caches/transforms-2/files-2.1/8f8ab13dc8f4e84e14a8bb3d9ac92bc4/core-1.0.1/AndroidManifest.xml:22:18-86
+16-->[androidx.core:core:1.0.1] /home/Lilian/.gradle/caches/transforms-2/files-2.1/8f8ab13dc8f4e84e14a8bb3d9ac92bc4/core-1.0.1/AndroidManifest.xml:22:18-86
 17        android:debuggable="true"
 18        android:icon="@mipmap/ic_launcher"
-18-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:10:9-43
+18-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:10:9-43
 19        android:label="@string/app_name"
-19-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:11:9-41
+19-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:11:9-41
 20        android:roundIcon="@mipmap/ic_launcher_round"
-20-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:12:9-54
+20-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:12:9-54
 21        android:supportsRtl="true"
-21-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:13:9-35
+21-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:13:9-35
 22        android:testOnly="true"
-23        android:theme="@style/AppTheme" >
-23-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:14:9-40
-24        <activity
-24-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:15:9-24:20
-25            android:name="com.example.testarea.MainActivity"
-25-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:16:13-41
-26            android:label="Area"
-26-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:17:13-33
-27            android:theme="@style/AppTheme.NoActionBar" >
-27-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:18:13-56
-28            <intent-filter>
-28-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:19:13-23:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:20:17-69
-29-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:20:25-66
-30
-31                <category android:name="android.intent.category.LAUNCHER" />
-31-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:22:17-77
-31-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:22:27-74
-32            </intent-filter>
-33        </activity>
-34        <activity
-34-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:25:9-27:20
-35            android:name="com.example.testarea.SecondActivity"
-35-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:25:19-49
-36            android:label="Area"
-36-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:25:50-70
-37            android:theme="@style/AppTheme.NoActionBar" >
-37-->/home/lrolland/AndroidStudioProjects/TestArea/app/src/main/AndroidManifest.xml:25:71-114
-38        </activity>
-39    </application>
-40
-41</manifest>
+23        android:theme="@style/AppTheme"
+23-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:14:9-40
+24        android:usesCleartextTraffic="true" >
+24-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:15:9-44
+25        <activity
+25-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:16:9-19:68
+26            android:name="com.example.testarea.WeatherActivity"
+26-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:17:13-44
+27            android:label="@string/title_activity_weather"
+27-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:18:13-59
+28            android:theme="@style/AppTheme.NoActionBar" />
+28-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:19:13-56
+29        <activity
+29-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:20:9-23:59
+30            android:name="com.example.testarea.NYActivity"
+30-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:21:13-39
+31            android:label="@string/title_activity_ny"
+31-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:22:13-54
+32            android:theme="@style/AppTheme.NoActionBar" />
+32-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:23:13-56
+33        <activity
+33-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:24:9-27:59
+34            android:name="com.example.testarea.LolActivity"
+34-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:25:13-40
+35            android:label="@string/title_activity_lol"
+35-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:26:13-55
+36            android:theme="@style/AppTheme.NoActionBar" />
+36-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:27:13-56
+37        <activity
+37-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:28:9-31:59
+38            android:name="com.example.testarea.BitcoinActivity"
+38-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:29:13-44
+39            android:label="Area : Bitcoin"
+39-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:30:13-43
+40            android:theme="@style/AppTheme.NoActionBar" />
+40-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:31:13-56
+41        <activity
+41-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:32:9-41:20
+42            android:name="com.example.testarea.MainActivity"
+42-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:33:13-41
+43            android:label="Area"
+43-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:34:13-33
+44            android:theme="@style/AppTheme.NoActionBar" >
+44-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:35:13-56
+45            <intent-filter>
+45-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:36:13-40:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:37:17-69
+46-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:37:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:39:17-77
+48-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:39:27-74
+49            </intent-filter>
+50        </activity>
+51        <activity
+51-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:42:9-45:59
+52            android:name="com.example.testarea.SecondActivity"
+52-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:43:13-43
+53            android:label="Area"
+53-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:44:13-33
+54            android:theme="@style/AppTheme.NoActionBar" />
+54-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:45:13-56
+55        <activity
+55-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:46:9-49:59
+56            android:name="com.example.testarea.RegisterActivity"
+56-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:47:13-45
+57            android:label="Area"
+57-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:48:13-33
+58            android:theme="@style/AppTheme.NoActionBar" />
+58-->/home/Lilian/delivery/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:49:13-56
+59    </application>
+60
+61</manifest>

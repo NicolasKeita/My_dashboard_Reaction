@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_bitcoin">BitcoinActivity</string>
     <string name="title_activity_lol">LolActivity</string>
+    <string name="title_activity_ny">NYActivity</string>
+    <string name="title_activity_weather">WeatherActivity</string>
 </resources>

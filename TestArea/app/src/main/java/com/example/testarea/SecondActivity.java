@@ -26,6 +26,8 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     private Button launchBitcoin;
     private Button launchLol;
+    private Button launchNY;
+    private Button launchWeather;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +38,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
         launchBitcoin = (Button) findViewById(R.id.buttonBitcoin);
         launchLol = (Button) findViewById(R.id.buttonLol);
+        launchNY = (Button) findViewById(R.id.buttonNY);
+        launchWeather = (Button) findViewById(R.id.buttonWeather);
 
         launchBitcoin.setOnClickListener(this);
         launchLol.setOnClickListener(this);
+        launchNY.setOnClickListener(this);
+        launchWeather.setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +54,12 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             this.startActivity(intentArea);
         } else if (v == launchLol) {
             Intent intentArea = new Intent(this, LolActivity.class);
+            this.startActivity(intentArea);
+        } else if (v == launchNY) {
+            Intent intentArea = new Intent(this, NYActivity.class);
+            this.startActivity(intentArea);
+        } else if (v == launchWeather) {
+            Intent intentArea = new Intent(this, WeatherActivity.class);
             this.startActivity(intentArea);
         }
     }
