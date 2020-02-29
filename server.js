@@ -7,6 +7,8 @@ const app = express()
 const body = require('body-parser')
 var request = require('request');
 var unirest = require("unirest");
+
+var nodeMailer = require('nodemailer');
 app.use(body())
 
 app.use(body.urlencoded({
@@ -114,12 +116,12 @@ app.get('/pollution', (req, res) => {
 
 app.get('/lol', (req, res) => {
     const options = {
-            url: 'https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key=RGAPI-7a7d52be-f26f-4714-8366-b31c092437bb',
+            url: 'https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key=RGAPI-4e57278e-7056-497c-a474-fe8afa6091a5',
             method: 'GET',
             headers: {
                 "Origin": "https://developer.riotgames.com",
                 "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
-                "X-Riot-Token": "RGAPI-7a7d52be-f26f-4714-8366-b31c092437bb",
+                "X-Riot-Token": "RGAPI-4e57278e-7056-497c-a474-fe8afa6091a5",
                 "Accept-Language": "en-US,en;q=0.5",
                 "User-Agent": "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0"
             }
@@ -165,6 +167,34 @@ app.get('/bitcoin', (req, res) => {
     });
 
 });
+
+app.post('/send-email', function (req, res) {
+      let transporter = nodeMailer.createTransport({
+          host: 'smtp.gmail.com',
+          port: 465,
+          secure: true,
+          /*auth: {
+              user: 'louis.druo@gmail.com',
+              pass: 'Furet9292'
+          }*/
+      });
+      let mailOptions = {
+          from: '"Hugo lacour" <louis.druo@gmail.com>', // sender address
+          to: 'hlacour49@gmail.com', // list of receivers
+          subject: "test", // Subject line
+          text: "hello", // plain text body
+          html: '<b>NodeJS Email Tutorial</b>' // html body
+      };
+
+      transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+              res.send(error);
+              return console.log(error);
+          }
+          console.log('Message %s sent: %s', info.messageId, info.response);
+              res.render('index');
+          });
+      });
 
 
 app.listen(3000, function () {
