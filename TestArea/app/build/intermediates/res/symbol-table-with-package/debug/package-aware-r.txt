@@ -1008,6 +1008,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable lol_server
+drawable mars
 drawable meteo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1070,6 +1071,7 @@ id btnRegister
 id btnSubmit
 id buttonBitcoin
 id buttonLol
+id buttonMars
 id buttonNY
 id buttonNasa
 id buttonPanel
@@ -1197,6 +1199,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id season_id
 id select_dialog_listview
 id selected
 id shortcut
@@ -1224,6 +1227,7 @@ id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id temp_id
 id text
 id text2
 id textSpacerNoButtons
@@ -1316,6 +1320,7 @@ layout abc_tooltip
 layout activity_bitcoin
 layout activity_lol
 layout activity_main
+layout activity_mars
 layout activity_nasa
 layout activity_ny
 layout activity_pollution
@@ -1325,6 +1330,7 @@ layout activity_weather
 layout content_bitcoin
 layout content_lol
 layout content_main
+layout content_mars
 layout content_nasa
 layout content_ny
 layout content_pollution
@@ -1420,6 +1426,7 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_bitcoin
 string title_activity_lol
+string title_activity_mars
 string title_activity_nasa
 string title_activity_ny
 string title_activity_pollution

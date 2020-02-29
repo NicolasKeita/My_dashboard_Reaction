@@ -32,12 +32,12 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_notification_action.xml.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/8f8ab13dc8f4e84e14a8bb3d9ac92bc4/core-1.0.1/res/layout/notification_action.xml"
-    },
-    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_checked_black.xml.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/drawable/ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_notification_action.xml.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/8f8ab13dc8f4e84e14a8bb3d9ac92bc4/core-1.0.1/res/layout/notification_action.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -88,24 +88,24 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/anim_abc_fade_out.xml.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/anim/abc_fade_out.xml"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_design_bottom_sheet_dialog.xml.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/layout/design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_design_bottom_sheet_dialog.xml.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/layout/design_bottom_sheet_dialog.xml"
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
@@ -120,12 +120,12 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable_abc_ic_menu_overflow_material.xml.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable/abc_ic_menu_overflow_material.xml"
-    },
-    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable_abc_ic_menu_overflow_material.xml.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_design_layout_snackbar_include.xml.flat",
@@ -220,12 +220,12 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/color/mtrl_chip_text_color.xml"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_button_bar_material.xml.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/layout/abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_indicator_material.xml.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_button_bar_material.xml.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
@@ -264,12 +264,12 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/interpolator-v21/mtrl_fast_out_slow_in.xml"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_dark.xml.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/color/abc_secondary_text_material_dark.xml"
-    },
-    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_dark.xml.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/color/abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_material.xml.flat",
@@ -284,12 +284,12 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/color/switch_thumb_material_light.xml"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_tick_mark_material.xml.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable/abc_seekbar_tick_mark_material.xml"
-    },
-    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_tick_mark_material.xml.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
@@ -320,12 +320,12 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-mdpi-v4/abc_ic_star_black_36dp.png"
-    },
-    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-mdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/color_mtrl_bottom_nav_colored_item_tint.xml.flat",
@@ -644,6 +644,10 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_activity_mars.xml.flat",
+        "source": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/res/layout/activity_mars.xml"
+    },
+    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
@@ -758,6 +762,10 @@
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_design_navigation_menu.xml.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_content_mars.xml.flat",
+        "source": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/res/layout/content_mars.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -1290,6 +1298,10 @@
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable_mars.jpg.flat",
+        "source": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/res/drawable/mars.jpg"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",

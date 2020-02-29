@@ -8,4 +8,5 @@
     <string name="title_activity_pollution">PollutionActivity</string>
     <string name="title_activity_steam">SteamActivity</string>
     <string name="title_activity_nasa">NasaActivity</string>
+    <string name="title_activity_mars">MarsActivity</string>
 </resources>

@@ -31,6 +31,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private Button launchPollution;
     private Button launchSteam;
     private Button launchNasa;
+    private Button launchMars;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +47,10 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         launchPollution = (Button) findViewById(R.id.buttonPollution);
         launchSteam = (Button) findViewById(R.id.buttonSteam);
         launchNasa = (Button) findViewById(R.id.buttonNasa);
+        launchMars = (Button) findViewById(R.id.buttonMars);
 
         launchNasa.setOnClickListener(this);
+        launchMars.setOnClickListener(this);
         launchBitcoin.setOnClickListener(this);
         launchLol.setOnClickListener(this);
         launchNY.setOnClickListener(this);
@@ -78,6 +81,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             this.startActivity(intentArea);
         } else if (v == launchNasa) {
             Intent intentArea = new Intent(this, NasaActivity.class);
+            this.startActivity(intentArea);
+        } else if (v == launchMars) {
+            Intent intentArea = new Intent(this, MarsActivity.class);
             this.startActivity(intentArea);
         }
     }

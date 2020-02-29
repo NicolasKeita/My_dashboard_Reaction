@@ -87,7 +87,7 @@ public class NasaActivity extends AppCompatActivity implements View.OnClickListe
                                     title.setText("Title : "+titre);
                                     explanation.setText("Explanation : "+description);
                                     //copyright.setText("Copyrights : "+droits);
-                                   // Picasso.with().load(pic).into(url);
+                                    //Picasso.with().load(pic).into(url);
                                 } catch (Exception e) {
                                 }
                             }
