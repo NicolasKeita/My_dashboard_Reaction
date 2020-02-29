@@ -1026,6 +1026,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable ny
 drawable pollution
+drawable steam
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1071,6 +1072,7 @@ id buttonLol
 id buttonNY
 id buttonPanel
 id buttonPollution
+id buttonSteam
 id buttonWeather
 id center
 id center_horizontal
@@ -1231,6 +1233,9 @@ id textinput_error
 id textinput_helper_text
 id time
 id title
+id title1_id
+id title2_id
+id title3_id
 id titleDividerNoCustom
 id title_template
 id toolbar
@@ -1245,6 +1250,9 @@ id transition_transform
 id uniform
 id unlabeled
 id up
+id url1_id
+id url2_id
+id url3_id
 id useLogo
 id view_offset_helper
 id visible
@@ -1305,6 +1313,7 @@ layout activity_main
 layout activity_ny
 layout activity_pollution
 layout activity_second
+layout activity_steam
 layout activity_weather
 layout content_bitcoin
 layout content_lol
@@ -1313,6 +1322,7 @@ layout content_ny
 layout content_pollution
 layout content_register
 layout content_second
+layout content_steam
 layout content_weather
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1404,6 +1414,7 @@ string title_activity_bitcoin
 string title_activity_lol
 string title_activity_ny
 string title_activity_pollution
+string title_activity_steam
 string title_activity_weather
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

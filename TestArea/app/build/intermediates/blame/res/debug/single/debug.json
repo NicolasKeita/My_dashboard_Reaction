@@ -4,6 +4,10 @@
         "source": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/res/layout/content_pollution.xml"
     },
     {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_content_steam.xml.flat",
+        "source": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/res/layout/content_steam.xml"
+    },
+    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-v21_design_bottom_navigation_item_background.xml.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/drawable-v21/design_bottom_navigation_item_background.xml"
     },
@@ -556,12 +560,12 @@
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/color_abc_tint_edittext.xml.flat",
-        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/color/abc_tint_edittext.xml"
-    },
-    {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/color_abc_tint_edittext.xml.flat",
+        "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/color/abc_tint_edittext.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_content_bitcoin.xml.flat",
@@ -574,6 +578,10 @@
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable_steam.png.flat",
+        "source": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/res/drawable/steam.png"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/color_mtrl_bottom_nav_item_tint.xml.flat",
@@ -1302,6 +1310,10 @@
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/layout_activity_steam.xml.flat",
+        "source": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/res/layout/activity_steam.xml"
     },
     {
         "merged": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
