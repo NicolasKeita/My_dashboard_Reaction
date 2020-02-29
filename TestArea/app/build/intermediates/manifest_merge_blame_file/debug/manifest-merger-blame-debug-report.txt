@@ -18,7 +18,7 @@
 12-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:6:22-76
 13
 14    <application
-14-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:8:5-58:19
+14-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:8:5-62:19
 15        android:allowBackup="true"
 15-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -39,87 +39,95 @@
 24-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:15:9-44
 25        <activity
 25-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:16:9-19:68
-26            android:name="com.example.testarea.SteamActivity"
-26-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:17:13-42
-27            android:label="@string/title_activity_steam"
-27-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:18:13-57
+26            android:name="com.example.testarea.NasaActivity"
+26-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:17:13-41
+27            android:label="@string/title_activity_nasa"
+27-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:18:13-56
 28            android:theme="@style/AppTheme.NoActionBar" />
 28-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:19:13-56
 29        <activity
 29-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:20:9-23:59
-30            android:name="com.example.testarea.PollutionActivity"
-30-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:21:13-46
-31            android:label="@string/title_activity_pollution"
-31-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:22:13-61
+30            android:name="com.example.testarea.SteamActivity"
+30-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:21:13-42
+31            android:label="@string/title_activity_steam"
+31-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:22:13-57
 32            android:theme="@style/AppTheme.NoActionBar" />
 32-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:23:13-56
 33        <activity
 33-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:24:9-27:59
-34            android:name="com.example.testarea.WeatherActivity"
-34-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:25:13-44
-35            android:label="@string/title_activity_weather"
-35-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:26:13-59
+34            android:name="com.example.testarea.PollutionActivity"
+34-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:25:13-46
+35            android:label="@string/title_activity_pollution"
+35-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:26:13-61
 36            android:theme="@style/AppTheme.NoActionBar" />
 36-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:27:13-56
 37        <activity
 37-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:28:9-31:59
-38            android:name="com.example.testarea.NYActivity"
-38-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:29:13-39
-39            android:label="@string/title_activity_ny"
-39-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:30:13-54
+38            android:name="com.example.testarea.WeatherActivity"
+38-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:29:13-44
+39            android:label="@string/title_activity_weather"
+39-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:30:13-59
 40            android:theme="@style/AppTheme.NoActionBar" />
 40-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:31:13-56
 41        <activity
 41-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:32:9-35:59
-42            android:name="com.example.testarea.LolActivity"
-42-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:33:13-40
-43            android:label="@string/title_activity_lol"
-43-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:34:13-55
+42            android:name="com.example.testarea.NYActivity"
+42-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:33:13-39
+43            android:label="@string/title_activity_ny"
+43-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:34:13-54
 44            android:theme="@style/AppTheme.NoActionBar" />
 44-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:35:13-56
 45        <activity
 45-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:36:9-39:59
-46            android:name="com.example.testarea.BitcoinActivity"
-46-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:37:13-44
-47            android:label="Area : Bitcoin"
-47-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:38:13-43
+46            android:name="com.example.testarea.LolActivity"
+46-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:37:13-40
+47            android:label="@string/title_activity_lol"
+47-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:38:13-55
 48            android:theme="@style/AppTheme.NoActionBar" />
 48-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:39:13-56
 49        <activity
-49-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:40:9-49:20
-50            android:name="com.example.testarea.MainActivity"
-50-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:41:13-41
-51            android:label="Area"
-51-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:42:13-33
-52            android:theme="@style/AppTheme.NoActionBar" >
+49-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:40:9-43:59
+50            android:name="com.example.testarea.BitcoinActivity"
+50-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:41:13-44
+51            android:label="Area : Bitcoin"
+51-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:42:13-43
+52            android:theme="@style/AppTheme.NoActionBar" />
 52-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:43:13-56
-53            <intent-filter>
-53-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:44:13-48:29
-54                <action android:name="android.intent.action.MAIN" />
-54-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:45:17-69
-54-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:45:25-66
-55
-56                <category android:name="android.intent.category.LAUNCHER" />
-56-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:47:17-77
-56-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:47:27-74
-57            </intent-filter>
-58        </activity>
-59        <activity
-59-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:50:9-53:59
-60            android:name="com.example.testarea.SecondActivity"
-60-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:51:13-43
-61            android:label="Area"
-61-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:52:13-33
-62            android:theme="@style/AppTheme.NoActionBar" />
-62-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:53:13-56
+53        <activity
+53-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:44:9-53:20
+54            android:name="com.example.testarea.MainActivity"
+54-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:45:13-41
+55            android:label="Area"
+55-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:46:13-33
+56            android:theme="@style/AppTheme.NoActionBar" >
+56-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:47:13-56
+57            <intent-filter>
+57-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:48:13-52:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:49:17-69
+58-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:49:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:51:17-77
+60-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:51:27-74
+61            </intent-filter>
+62        </activity>
 63        <activity
 63-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:54:9-57:59
-64            android:name="com.example.testarea.RegisterActivity"
-64-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:55:13-45
+64            android:name="com.example.testarea.SecondActivity"
+64-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:55:13-43
 65            android:label="Area"
 65-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:56:13-33
 66            android:theme="@style/AppTheme.NoActionBar" />
 66-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:57:13-56
-67    </application>
-68
-69</manifest>
+67        <activity
+67-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:58:9-61:59
+68            android:name="com.example.testarea.RegisterActivity"
+68-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:59:13-45
+69            android:label="Area"
+69-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:60:13-33
+70            android:theme="@style/AppTheme.NoActionBar" />
+70-->/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/src/main/AndroidManifest.xml:61:13-56
+71    </application>
+72
+73</manifest>

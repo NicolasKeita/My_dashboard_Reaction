@@ -14,9 +14,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".NasaActivity"
+            android:label="@string/title_activity_nasa"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".SteamActivity"
             android:label="@string/title_activity_steam"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PollutionActivity"
             android:label="@string/title_activity_pollution"

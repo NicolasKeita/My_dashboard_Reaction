@@ -33,4 +33,5 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.3.1'
     implementation 'org.apache.httpcomponents:httpclient:4.5.11'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }

@@ -1011,6 +1011,7 @@ drawable lol_server
 drawable meteo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
+drawable nasa
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -1070,6 +1071,7 @@ id btnSubmit
 id buttonBitcoin
 id buttonLol
 id buttonNY
+id buttonNasa
 id buttonPanel
 id buttonPollution
 id buttonSteam
@@ -1087,10 +1089,12 @@ id container
 id content
 id contentPanel
 id coordinator
+id copyright_id
 id custom
 id customPanel
 id decor_content_parent
 id default_activity_button
+id desc_id
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1125,6 +1129,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id image_id
 id indice1
 id indice2
 id indice3
@@ -1237,6 +1242,7 @@ id title1_id
 id title2_id
 id title3_id
 id titleDividerNoCustom
+id title_id
 id title_template
 id toolbar
 id top
@@ -1310,6 +1316,7 @@ layout abc_tooltip
 layout activity_bitcoin
 layout activity_lol
 layout activity_main
+layout activity_nasa
 layout activity_ny
 layout activity_pollution
 layout activity_second
@@ -1318,6 +1325,7 @@ layout activity_weather
 layout content_bitcoin
 layout content_lol
 layout content_main
+layout content_nasa
 layout content_ny
 layout content_pollution
 layout content_register
@@ -1412,6 +1420,7 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_bitcoin
 string title_activity_lol
+string title_activity_nasa
 string title_activity_ny
 string title_activity_pollution
 string title_activity_steam

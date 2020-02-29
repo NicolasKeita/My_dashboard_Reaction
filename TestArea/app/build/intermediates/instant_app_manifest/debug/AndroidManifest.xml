@@ -24,6 +24,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.testarea.NasaActivity"
+            android:label="@string/title_activity_nasa"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.example.testarea.SteamActivity"
             android:label="@string/title_activity_steam"
             android:theme="@style/AppTheme.NoActionBar" />
