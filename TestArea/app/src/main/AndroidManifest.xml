@@ -14,9 +14,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LolActivity"
+            android:label="@string/title_activity_lol"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".BitcoinActivity"
             android:label="Area : Bitcoin"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="Area"
@@ -30,11 +34,11 @@
         <activity
             android:name=".SecondActivity"
             android:label="Area"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
             android:label="Area"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

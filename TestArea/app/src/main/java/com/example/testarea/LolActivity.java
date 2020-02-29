@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
@@ -22,34 +23,41 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
-public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
+public class LolActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button launchBitcoin;
-    private Button launchLol;
+    private TextView lolRegion;
+    private TextView lolStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_lol);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        lolRegion = (TextView) findViewById(R.id.lolRegion);
+        lolStatus = (TextView) findViewById(R.id.lolStatus);
 
-        launchBitcoin = (Button) findViewById(R.id.buttonBitcoin);
-        launchLol = (Button) findViewById(R.id.buttonLol);
-
-        launchBitcoin.setOnClickListener(this);
-        launchLol.setOnClickListener(this);
+        final OkHttpClient httpClient = new OkHttpClient();
+        final Request request = new Request.Builder()
+                .url("http://10.0.2.2:3000/lol")
+                .build();
+        Response response = null;
+        try {
+            response = httpClient.newCall(request).execute();
+            String jsonData = response.body().string();
+            JSONObject object = new JSONObject(jsonData);
+            String region = object.getString("name");
+            JSONArray object2 = object.getJSONArray("services");
+            JSONObject subObject = (JSONObject) object2.get(0);
+            String status = subObject.getString("status");
+            lolRegion.setText("REGION : "+region);
+            lolStatus.setText("STATUS : "+status);
+        } catch (Exception e) {
+        }
     }
 
     @Override
     public void onClick(View v) {
-        if (v == launchBitcoin) {
-            Intent intentArea = new Intent(this, BitcoinActivity.class);
-            this.startActivity(intentArea);
-        } else if (v == launchLol) {
-            Intent intentArea = new Intent(this, LolActivity.class);
-            this.startActivity(intentArea);
-        }
     }
 
     @Override
