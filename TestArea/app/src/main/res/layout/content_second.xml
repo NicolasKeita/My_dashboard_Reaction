@@ -4,51 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".SecondActivity"
     tools:showIn="@layout/activity_second">
 
-    <Button
-        android:id="@+id/buttonBitcoin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="106dp"
-        android:text="Bitcoin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
 
-    <Button
-        android:id="@+id/buttonLol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="58dp"
-        android:text="LoL"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBitcoin" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
 
-    <Button
-        android:id="@+id/buttonNY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginLeft="159dp"
-        android:layout_marginTop="66dp"
-        android:text="NY Time"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLol" />
+            <Button
+                android:id="@+id/buttonBitcoin"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="58dp"
+                android:background="#FFFFFF"
+                android:drawableBottom="@drawable/bitcoin"
+                app:layout_constraintBottom_toTopOf="@+id/buttonLol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonWeather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginLeft="156dp"
-        android:layout_marginTop="65dp"
-        android:text="Weather"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNY" />
+            <Button
+                android:id="@+id/buttonLol"
+                android:layout_width="wrap_content"
+                android:layout_height="148dp"
+                android:layout_margin="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                android:drawableBottom="@drawable/lol_server"
+                app:layout_constraintStart_toStartOf="@id/buttonBitcoin"
+                app:layout_constraintTop_toBottomOf="@id/buttonBitcoin" />
+
+            <Button
+                android:id="@+id/buttonNY"
+                android:layout_width="491dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="159dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="160dp"
+                android:layout_marginRight="140dp"
+                android:background="#FFFFFF"
+                android:drawableBottom="@drawable/ny"
+                app:layout_constraintStart_toStartOf="@id/buttonLol"
+                app:layout_constraintTop_toBottomOf="@+id/buttonLol" />
+
+            <Button
+                android:id="@+id/buttonWeather"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="156dp"
+                android:layout_marginLeft="156dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="160dp"
+                android:layout_marginRight="140dp"
+                android:background="#FFFFFF"
+                android:drawableBottom="@drawable/meteo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonNY" />
+
+            <Button
+                android:id="@+id/buttonPollution"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="156dp"
+                android:layout_marginLeft="156dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="160dp"
+                android:layout_marginRight="140dp"
+                android:background="#FFFFFF"
+                android:drawableBottom="@drawable/pollution"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonWeather" />
+        </LinearLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

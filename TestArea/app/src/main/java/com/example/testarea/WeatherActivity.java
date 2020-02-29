@@ -50,6 +50,40 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
             weather.setText("Current weather at Paris: "+status);
         } catch (Exception e) {
         }
+        Thread t=new Thread(){
+
+
+            @Override
+            public void run(){
+                while(!isInterrupted()){
+                    try {
+                        Thread.sleep(600000);  //1000ms = 1 sec
+                        runOnUiThread(new Runnable() {
+
+                            @Override
+                            public void run() {
+                                //request
+                                try {
+                                    Response response = httpClient.newCall(request).execute();
+                                    String jsonData = response.body().string();
+                                    JSONObject object = new JSONObject(jsonData);
+                                    JSONArray object2 = object.getJSONArray("weather");
+                                    JSONObject subObject = (JSONObject) object2.get(0);
+                                    String status = subObject.getString("main");
+                                    weather.setText("Current weather at Paris: "+status);
+                                } catch (Exception e) {
+                                }
+                            }
+                        });
+
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        };
+        t.start();
     }
 
     @Override

@@ -995,6 +995,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bitcoin
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1006,6 +1007,8 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable lol_server
+drawable meteo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1021,6 +1024,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable ny
+drawable pollution
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1065,6 +1070,7 @@ id buttonBitcoin
 id buttonLol
 id buttonNY
 id buttonPanel
+id buttonPollution
 id buttonWeather
 id center
 id center_horizontal
@@ -1117,6 +1123,11 @@ id icon
 id icon_group
 id ifRoom
 id image
+id indice1
+id indice2
+id indice3
+id indice4
+id indice5
 id info
 id invisible
 id italic
@@ -1292,12 +1303,14 @@ layout activity_bitcoin
 layout activity_lol
 layout activity_main
 layout activity_ny
+layout activity_pollution
 layout activity_second
 layout activity_weather
 layout content_bitcoin
 layout content_lol
 layout content_main
 layout content_ny
+layout content_pollution
 layout content_register
 layout content_second
 layout content_weather
@@ -1390,6 +1403,7 @@ string status_bar_notification_info_overflow
 string title_activity_bitcoin
 string title_activity_lol
 string title_activity_ny
+string title_activity_pollution
 string title_activity_weather
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

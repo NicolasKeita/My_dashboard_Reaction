@@ -77,7 +77,6 @@ public class BitcoinActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
         };
-
         t.start();
     }
 

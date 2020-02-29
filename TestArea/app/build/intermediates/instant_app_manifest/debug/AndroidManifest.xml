@@ -24,6 +24,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.testarea.PollutionActivity"
+            android:label="@string/title_activity_pollution"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.example.testarea.WeatherActivity"
             android:label="@string/title_activity_weather"
             android:theme="@style/AppTheme.NoActionBar" />

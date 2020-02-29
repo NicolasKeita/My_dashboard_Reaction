@@ -14,9 +14,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".PollutionActivity"
+            android:label="@string/title_activity_pollution"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".WeatherActivity"
             android:label="@string/title_activity_weather"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".NYActivity"
             android:label="@string/title_activity_ny"

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/Lilian/delivery/DEV_area_2019/TestArea/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "/home/lrolland/delivery/TEK3/DEV_area_2019/TestArea/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/home/Lilian/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/values-v28/values-v28.xml",
+                    "source": "/home/lrolland/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
