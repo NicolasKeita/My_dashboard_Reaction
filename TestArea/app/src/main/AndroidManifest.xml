@@ -14,9 +14,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".TrelloActivity"
+            android:label="@string/title_activity_trello"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".MarsActivity"
             android:label="@string/title_activity_mars"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".NasaActivity"
             android:label="@string/title_activity_nasa"

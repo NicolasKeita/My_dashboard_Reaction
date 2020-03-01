@@ -1031,6 +1031,7 @@ drawable pollution
 drawable steam
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable trello
 id ALT
 id CTRL
 id FUNCTION
@@ -1077,6 +1078,7 @@ id buttonNasa
 id buttonPanel
 id buttonPollution
 id buttonSteam
+id buttonTrello
 id buttonWeather
 id center
 id center_horizontal
@@ -1157,6 +1159,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id name_id
 id navigation_header_container
 id never
 id none
@@ -1326,6 +1329,7 @@ layout activity_ny
 layout activity_pollution
 layout activity_second
 layout activity_steam
+layout activity_trello
 layout activity_weather
 layout content_bitcoin
 layout content_lol
@@ -1337,6 +1341,7 @@ layout content_pollution
 layout content_register
 layout content_second
 layout content_steam
+layout content_trello
 layout content_weather
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1431,6 +1436,7 @@ string title_activity_nasa
 string title_activity_ny
 string title_activity_pollution
 string title_activity_steam
+string title_activity_trello
 string title_activity_weather
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

@@ -24,6 +24,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.testarea.TrelloActivity"
+            android:label="@string/title_activity_trello"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.example.testarea.MarsActivity"
             android:label="@string/title_activity_mars"
             android:theme="@style/AppTheme.NoActionBar" />

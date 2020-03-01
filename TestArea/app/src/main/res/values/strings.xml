@@ -9,4 +9,5 @@
     <string name="title_activity_steam">SteamActivity</string>
     <string name="title_activity_nasa">NasaActivity</string>
     <string name="title_activity_mars">MarsActivity</string>
+    <string name="title_activity_trello">TrelloActivity</string>
 </resources>
