@@ -3,10 +3,10 @@ services:
         serv:
                 restart: always
                 build: ./serv
-                ports:
-                - "4242:80"
                 networks:
                 - serv-tier
+        web:
+                build: ./web/area_web
 
 networks:
         serv-tier:
