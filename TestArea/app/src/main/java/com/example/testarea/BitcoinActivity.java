@@ -43,7 +43,7 @@ public class BitcoinActivity extends AppCompatActivity implements View.OnClickLi
             String jsonData = response.body().string();
             JSONObject object = new JSONObject(jsonData);
             String quantity = object.getString("to_quantity");
-            testBitcoin.setText(quantity);
+            testBitcoin.setText("1€ = "+quantity+" btc");
         } catch (Exception e) {
         }
         Thread t=new Thread(){
@@ -64,7 +64,7 @@ public class BitcoinActivity extends AppCompatActivity implements View.OnClickLi
                                     String jsonData = response.body().string();
                                     JSONObject object = new JSONObject(jsonData);
                                     String quantity = object.getString("to_quantity");
-                                    testBitcoin.setText(quantity);
+                                    testBitcoin.setText("1€ = "+quantity+" btc");
                                 } catch (Exception e) {
                                 }
                             }
