@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestArea</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_bitcoin">BitcoinActivity</string>
+    <string name="title_activity_lol">LolActivity</string>
+    <string name="title_activity_ny">NYActivity</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+    <string name="title_activity_pollution">PollutionActivity</string>
+    <string name="title_activity_steam">SteamActivity</string>
+    <string name="title_activity_nasa">NasaActivity</string>
+    <string name="title_activity_mars">MarsActivity</string>
+    <string name="title_activity_trello">TrelloActivity</string>
+</resources>

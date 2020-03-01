@@ -1,0 +1,10 @@
+@media all and (min-width: 480px) {
+  .Register {
+    padding: 60px 0;
+  }
+
+  .Register Card {
+    margin: 60 auto;
+    max-width: 320px;
+  }
+}
