@@ -1,11 +1,11 @@
 {
   "name": "dev_area_2019",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "utils/config_firebase.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node bin/server"
   },
   "repository": {
     "type": "git",
