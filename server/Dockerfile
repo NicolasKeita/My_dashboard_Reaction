@@ -1,9 +1,10 @@
-FROM node:6.11.5
+FROM node:12.14.1
 
-WORKDIR /serv
-COPY package.json .
+WORKDIR /usr/src/DEV_area_2019
+COPY package.json ./
+COPY package-lock.json ./
 RUN npm install
-COPY . .
+COPY ./ ./
 
-EXPOSE 3000
+EXPOSE 8080
 CMD ["npm", "start"]
