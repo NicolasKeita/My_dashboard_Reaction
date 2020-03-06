@@ -1,4 +1,4 @@
-const fire = require("./config_firebase")
+const fire = require("./config_firebase");
 
 const _checkRegister = async (email, password) => {
 	return (
@@ -8,6 +8,6 @@ const _checkRegister = async (email, password) => {
 			.then(() => {return("succes")})
 			.catch(error => {return("error")})
 		)
-}
+};
 
-module.exports = _checkRegister
+module.exports = _checkRegister;

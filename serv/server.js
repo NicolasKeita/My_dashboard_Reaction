@@ -1,15 +1,15 @@
-const  _checkLogin = require('./connexion.js')
-const  _checkRegister = require('./register.js')
+const  _checkLogin = require('./connexion.js');
+const  _checkRegister = require('./register.js');
 
+const express = require('express');
+const app = express();
+const body = require('body-parser');
+const request = require('request');
+const unirest = require("unirest");
 
-const express = require('express')
-const app = express()
-const body = require('body-parser')
-var request = require('request');
-var unirest = require("unirest");
+const nodeMailer = require('nodemailer');
 
-var nodeMailer = require('nodemailer');
-app.use(body())
+app.use(body());
 
 app.use(body.urlencoded({
   extended: true
@@ -160,8 +160,6 @@ app.get('/bitcoin', (req, res) => {
     	"x-rapidapi-host": "bravenewcoin-v1.p.rapidapi.com",
     	"x-rapidapi-key": "35d6f32c07msh355864905c93ccep1db843jsna91afb81c842"
     });
-
-
 
     reqB.end(function (resB) {
 
