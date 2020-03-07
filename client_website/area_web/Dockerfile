@@ -1,10 +1,11 @@
-FROM node:12.14.1
+FROM node:12.2.0-alpine
 
-WORKDIR /usr/src/DEV_area_2019_server
+WORKDIR /usr/src/DEV_area_2019_client_website
+
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
 COPY ./ ./
 
-EXPOSE 8080
+EXPOSE 8000
 CMD ["npm", "start"]
