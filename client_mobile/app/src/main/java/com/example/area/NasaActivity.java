@@ -1,52 +1,60 @@
-package com.example.testarea;
+package com.example.area;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.squareup.picasso.Picasso;
 
-import java.util.Objects;
+import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class WeatherActivity extends AppCompatActivity implements View.OnClickListener {
+public class NasaActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView weather;
+    private TextView title;
+    private TextView explanation;
+    //private TextView copyright;
+    private ImageView url;
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather);
+        setContentView(R.layout.activity_nasa);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        weather = findViewById(R.id.weather_id);
+        title = (TextView) findViewById(R.id.title_id);
+        explanation = (TextView) findViewById(R.id.desc_id);
+        //copyright = (TextView) findViewById(R.id.copyright_id);
+        url = (ImageView) findViewById(R.id.image_id);
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/weather")
+                .url("http://10.0.2.2:3000/pictures")
                 .build();
         Response response = null;
         try {
             response = httpClient.newCall(request).execute();
-            String jsonData = Objects.requireNonNull(response.body()).string();
+            String jsonData = response.body().string();
             JSONObject object = new JSONObject(jsonData);
-            JSONArray object2 = object.getJSONArray("weather");
-            JSONObject subObject = (JSONObject) object2.get(0);
-            String status = subObject.getString("main");
-            weather.setText("Current weather at Paris: " + status);
-        } catch (Exception ignored) {
+            String titre = object.getString("title");
+            String description = object.getString("explanation");
+            //String droits = object.getString("copyright");
+            String pic = object.getString("url");
+            title.setText("Title : "+titre);
+            explanation.setText("Explanation : "+description);
+            //copyright.setText("Copyrights : "+droits);
+            Picasso.with(this).load(pic).into(url);
+        } catch (Exception e) {
         }
         Thread t=new Thread(){
 
@@ -63,13 +71,17 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
                                 //request
                                 try {
                                     Response response = httpClient.newCall(request).execute();
-                                    String jsonData = Objects.requireNonNull(response.body()).string();
+                                    String jsonData = response.body().string();
                                     JSONObject object = new JSONObject(jsonData);
-                                    JSONArray object2 = object.getJSONArray("weather");
-                                    JSONObject subObject = (JSONObject) object2.get(0);
-                                    String status = subObject.getString("main");
-                                    weather.setText("Current weather at Paris: " + status);
-                                } catch (Exception ignored) {
+                                    String titre = object.getString("title");
+                                    String description = object.getString("explanation");
+                                    //String droits = object.getString("copyright");
+                                    String pic = object.getString("url");
+                                    title.setText("Title : "+titre);
+                                    explanation.setText("Explanation : "+description);
+                                    //copyright.setText("Copyrights : "+droits);
+                                    //Picasso.with().load(pic).into(url);
+                                } catch (Exception e) {
                                 }
                             }
                         });
@@ -109,4 +121,3 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
         return super.onOptionsItemSelected(item);
     }
 }
-

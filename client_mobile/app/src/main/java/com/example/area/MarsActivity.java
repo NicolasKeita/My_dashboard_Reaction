@@ -1,29 +1,19 @@
-package com.example.testarea;
+package com.example.area;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.squareup.picasso.Picasso;
-
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
 public class MarsActivity extends AppCompatActivity implements View.OnClickListener {
 

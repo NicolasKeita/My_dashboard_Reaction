@@ -1,56 +1,48 @@
-package com.example.testarea;
+package com.example.area;
 
-import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.util.Objects;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
-public class NYActivity extends AppCompatActivity implements View.OnClickListener {
+public class BitcoinActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView NYDay;
-    private TextView NYTime;
+    private TextView testBitcoin;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ny);
+        setContentView(R.layout.activity_bitcoin);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        NYDay = (TextView) findViewById(R.id.ny_day);
-        NYTime = (TextView) findViewById(R.id.ny_time);
-
+        testBitcoin = findViewById(R.id.dispBitcoin);
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/time")
+                .url("http://10.0.2.2:3000/bitcoin")
                 .build();
-        Response response = null;
+        Response response;
         try {
             response = httpClient.newCall(request).execute();
-            String jsonData = response.body().string();
+            String jsonData = Objects.requireNonNull(response.body()).string();
             JSONObject object = new JSONObject(jsonData);
-            String day = object.getString("dayOfTheWeek");
-            String time = object.getString("currentDateTime");
-            NYDay.setText("DAY : "+day);
-            NYTime.setText("TIME : "+time);
-        } catch (Exception e) {
+            String quantity = object.getString("to_quantity");
+            testBitcoin.setText("1€ = "+quantity+" btc");
+        } catch (Exception ignored) {
         }
         Thread t=new Thread(){
 
@@ -59,7 +51,7 @@ public class NYActivity extends AppCompatActivity implements View.OnClickListene
             public void run(){
                 while(!isInterrupted()){
                     try {
-                        Thread.sleep(10000);  //1000ms = 1 sec
+                        Thread.sleep(60000);  //1000ms = 1 sec
                         runOnUiThread(new Runnable() {
 
                             @Override
@@ -69,11 +61,9 @@ public class NYActivity extends AppCompatActivity implements View.OnClickListene
                                     Response response = httpClient.newCall(request).execute();
                                     String jsonData = response.body().string();
                                     JSONObject object = new JSONObject(jsonData);
-                                    String day = object.getString("dayOfTheWeek");
-                                    String time = object.getString("currentDateTime");
-                                    NYDay.setText("DAY : "+day);
-                                    NYTime.setText("TIME : "+time);
-                                } catch (Exception e) {
+                                    String quantity = object.getString("to_quantity");
+                                    testBitcoin.setText("1€ = "+quantity+" btc");
+                                } catch (Exception ignored) {
                                 }
                             }
                         });

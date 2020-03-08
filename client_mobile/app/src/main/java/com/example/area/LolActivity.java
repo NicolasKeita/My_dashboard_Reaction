@@ -1,49 +1,55 @@
-package com.example.testarea;
+package com.example.area;
 
-import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
+import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.util.Objects;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
-public class BitcoinActivity extends AppCompatActivity implements View.OnClickListener {
+public class LolActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView testBitcoin;
+    private TextView lolRegion;
+    private TextView lolStatus;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bitcoin);
+        setContentView(R.layout.activity_lol);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        testBitcoin = (TextView) findViewById(R.id.dispBitcoin);
+        lolRegion = findViewById(R.id.lolRegion);
+        lolStatus = findViewById(R.id.lolStatus);
+
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/bitcoin")
+                .url("http://10.0.2.2:3000/lol")
                 .build();
-        Response response = null;
+        Response response;
         try {
             response = httpClient.newCall(request).execute();
-            String jsonData = response.body().string();
+            String jsonData = Objects.requireNonNull(response.body()).string();
             JSONObject object = new JSONObject(jsonData);
-            String quantity = object.getString("to_quantity");
-            testBitcoin.setText("1€ = "+quantity+" btc");
+            String region = object.getString("name");
+            JSONArray object2 = object.getJSONArray("services");
+            JSONObject subObject = (JSONObject) object2.get(0);
+            String status = subObject.getString("status");
+            lolRegion.setText("REGION : "+region);
+            lolStatus.setText("STATUS : "+status);
         } catch (Exception e) {
         }
         Thread t=new Thread(){
@@ -63,8 +69,12 @@ public class BitcoinActivity extends AppCompatActivity implements View.OnClickLi
                                     Response response = httpClient.newCall(request).execute();
                                     String jsonData = response.body().string();
                                     JSONObject object = new JSONObject(jsonData);
-                                    String quantity = object.getString("to_quantity");
-                                    testBitcoin.setText("1€ = "+quantity+" btc");
+                                    String region = object.getString("name");
+                                    JSONArray object2 = object.getJSONArray("services");
+                                    JSONObject subObject = (JSONObject) object2.get(0);
+                                    String status = subObject.getString("status");
+                                    lolRegion.setText("REGION : "+region);
+                                    lolStatus.setText("STATUS : "+status);
                                 } catch (Exception e) {
                                 }
                             }

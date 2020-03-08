@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.testarea">
+    package="com.example.area">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -14,43 +14,43 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".TrelloActivity"
+            android:name="com.example.area.TrelloActivity"
             android:label="@string/title_activity_trello"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".MarsActivity"
+            android:name="com.example.area.MarsActivity"
             android:label="@string/title_activity_mars"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".NasaActivity"
+            android:name="com.example.area.NasaActivity"
             android:label="@string/title_activity_nasa"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SteamActivity"
+            android:name="com.example.area.SteamActivity"
             android:label="@string/title_activity_steam"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PollutionActivity"
+            android:name="com.example.area.PollutionActivity"
             android:label="@string/title_activity_pollution"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".WeatherActivity"
+            android:name="com.example.area.WeatherActivity"
             android:label="@string/title_activity_weather"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".NYActivity"
+            android:name="com.example.area.NYActivity"
             android:label="@string/title_activity_ny"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LolActivity"
+            android:name="com.example.area.LolActivity"
             android:label="@string/title_activity_lol"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".BitcoinActivity"
+            android:name="com.example.area.BitcoinActivity"
             android:label="Area : Bitcoin"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.area.MainActivity"
             android:label="Area"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -60,11 +60,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name="com.example.area.SecondActivity"
             android:label="Area"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.example.area.RegisterActivity"
             android:label="Area"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

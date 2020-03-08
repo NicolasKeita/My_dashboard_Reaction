@@ -1,4 +1,4 @@
-package com.example.testarea;
+package com.example.area;
 
 import android.content.Intent;
 import android.os.Bundle;

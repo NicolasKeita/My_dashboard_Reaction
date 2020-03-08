@@ -1,57 +1,47 @@
-package com.example.testarea;
+package com.example.area;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
-public class LolActivity extends AppCompatActivity implements View.OnClickListener {
+public class NYActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView lolRegion;
-    private TextView lolStatus;
+    private TextView NYDay;
+    private TextView NYTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lol);
+        setContentView(R.layout.activity_ny);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        lolRegion = (TextView) findViewById(R.id.lolRegion);
-        lolStatus = (TextView) findViewById(R.id.lolStatus);
+        NYDay = (TextView) findViewById(R.id.ny_day);
+        NYTime = (TextView) findViewById(R.id.ny_time);
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/lol")
+                .url("http://10.0.2.2:3000/time")
                 .build();
         Response response = null;
         try {
             response = httpClient.newCall(request).execute();
             String jsonData = response.body().string();
             JSONObject object = new JSONObject(jsonData);
-            String region = object.getString("name");
-            JSONArray object2 = object.getJSONArray("services");
-            JSONObject subObject = (JSONObject) object2.get(0);
-            String status = subObject.getString("status");
-            lolRegion.setText("REGION : "+region);
-            lolStatus.setText("STATUS : "+status);
+            String day = object.getString("dayOfTheWeek");
+            String time = object.getString("currentDateTime");
+            NYDay.setText("DAY : "+day);
+            NYTime.setText("TIME : "+time);
         } catch (Exception e) {
         }
         Thread t=new Thread(){
@@ -61,7 +51,7 @@ public class LolActivity extends AppCompatActivity implements View.OnClickListen
             public void run(){
                 while(!isInterrupted()){
                     try {
-                        Thread.sleep(60000);  //1000ms = 1 sec
+                        Thread.sleep(10000);  //1000ms = 1 sec
                         runOnUiThread(new Runnable() {
 
                             @Override
@@ -71,12 +61,10 @@ public class LolActivity extends AppCompatActivity implements View.OnClickListen
                                     Response response = httpClient.newCall(request).execute();
                                     String jsonData = response.body().string();
                                     JSONObject object = new JSONObject(jsonData);
-                                    String region = object.getString("name");
-                                    JSONArray object2 = object.getJSONArray("services");
-                                    JSONObject subObject = (JSONObject) object2.get(0);
-                                    String status = subObject.getString("status");
-                                    lolRegion.setText("REGION : "+region);
-                                    lolStatus.setText("STATUS : "+status);
+                                    String day = object.getString("dayOfTheWeek");
+                                    String time = object.getString("currentDateTime");
+                                    NYDay.setText("DAY : "+day);
+                                    NYTime.setText("TIME : "+time);
                                 } catch (Exception e) {
                                 }
                             }

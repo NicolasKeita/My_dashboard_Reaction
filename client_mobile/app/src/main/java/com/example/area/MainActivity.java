@@ -1,14 +1,7 @@
-package com.example.testarea;
+package com.example.area;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import java.io.*;
-import java.net.*;
-import java.util.*;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -22,18 +15,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import android.os.AsyncTask;
-
-import okhttp3.*;
 import okhttp3.FormBody;
-import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-
-
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -50,10 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        editTextMail = (EditText) findViewById(R.id.editTextMail);
-        editTextMdp = (EditText) findViewById(R.id.editTextMdp);
-        btnSubmit = (Button) findViewById(R.id.btnSubmit);
-        btnRegister = (Button) findViewById(R.id.btnRegister);
+        editTextMail = findViewById(R.id.editTextMail);
+        editTextMdp = findViewById(R.id.editTextMdp);
+        btnSubmit = findViewById(R.id.btnSubmit);
+        btnRegister = findViewById(R.id.btnRegister);
         textView = findViewById(R.id.textView);
 
         btnSubmit.setOnClickListener(this);
@@ -105,8 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .url("http://10.0.2.2:3000/users")
                         .post(formBody)
                         .build();
-                Response response = null;
-
+                Response response;
 
                 try {
                         //textView.setText("Before exec");

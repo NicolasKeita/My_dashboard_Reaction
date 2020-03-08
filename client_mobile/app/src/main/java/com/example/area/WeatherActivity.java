@@ -1,4 +1,4 @@
-package com.example.testarea;
+package com.example.area;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -20,48 +20,33 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class TrelloActivity extends AppCompatActivity implements View.OnClickListener {
+public class WeatherActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView aName;
-    private TextView title;
-
-
+    private TextView weather;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trello);
+        setContentView(R.layout.activity_weather);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        title = findViewById(R.id.title_id);
-        aName = findViewById(R.id.name_id);
+        weather = findViewById(R.id.weather_id);
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/trello")
+                .url("http://10.0.2.2:3000/weather")
                 .build();
-        Response response;
+        Response response = null;
         try {
             response = httpClient.newCall(request).execute();
             String jsonData = Objects.requireNonNull(response.body()).string();
-            JSONArray object = new JSONArray(jsonData);
-            int size = object.length();
-            int i = 0;
-            title.setText("Liste des tableaux Trello : ");
-            String all = null;
-            while (i < size) {
-                JSONObject object2 = object.getJSONObject(i);
-                String name = object2.getString("name");
-                if (all == null)
-                    all = name+"\n";
-                else
-                    all += name+"\n";
-                i++;
-            }
-            aName.setText(all);
-        } catch (Exception e) {
-            title.setText("errror");
+            JSONObject object = new JSONObject(jsonData);
+            JSONArray object2 = object.getJSONArray("weather");
+            JSONObject subObject = (JSONObject) object2.get(0);
+            String status = subObject.getString("main");
+            weather.setText("Current weather at Paris: " + status);
+        } catch (Exception ignored) {
         }
         Thread t=new Thread(){
 
@@ -70,31 +55,21 @@ public class TrelloActivity extends AppCompatActivity implements View.OnClickLis
             public void run(){
                 while(!isInterrupted()){
                     try {
-                        Thread.sleep(60000);  //1000ms = 1 sec
+                        Thread.sleep(600000);  //1000ms = 1 sec
                         runOnUiThread(new Runnable() {
 
                             @Override
                             public void run() {
                                 //request
                                 try {
-                                    Response response = httpClient.newCall(request).execute();String jsonData = response.body().string();
-                                    String jsonData2 = response.body().string();
-                                    JSONArray object = new JSONArray(jsonData2);
-                                    int size = object.length();
-                                    int i = 0;
-                                    title.setText("Liste des tableaux Trello : ");
-                                    String all = new String();
-                                    while (i < size) {
-                                        JSONObject object2 = object.getJSONObject(i);
-                                        String name = object2.getString("name");
-                                        if (all == null)
-                                            all = name+"\n";
-                                        else
-                                            all += name+"\n";
-                                        i++;
-                                    }
-                                    aName.setText(all);
-                                } catch (Exception e) {
+                                    Response response = httpClient.newCall(request).execute();
+                                    String jsonData = Objects.requireNonNull(response.body()).string();
+                                    JSONObject object = new JSONObject(jsonData);
+                                    JSONArray object2 = object.getJSONArray("weather");
+                                    JSONObject subObject = (JSONObject) object2.get(0);
+                                    String status = subObject.getString("main");
+                                    weather.setText("Current weather at Paris: " + status);
+                                } catch (Exception ignored) {
                                 }
                             }
                         });
@@ -134,3 +109,4 @@ public class TrelloActivity extends AppCompatActivity implements View.OnClickLis
         return super.onOptionsItemSelected(item);
     }
 }
+
