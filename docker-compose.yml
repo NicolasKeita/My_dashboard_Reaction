@@ -11,6 +11,8 @@ services:
   client_mobile:
     restart: on-failure
     build: ./client_mobile/
+    depends_on:
+      - server_http
     ports:
       - "8081:8081"
     networks:
@@ -21,6 +23,9 @@ services:
   client_website:
     restart: always
     build: ./client_website/
+    depends_on:
+      - server_http
+      - client_mobile
     ports:
       - "8081:8081"
     networks:
