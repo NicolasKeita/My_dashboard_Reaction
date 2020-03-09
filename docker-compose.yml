@@ -1,10 +1,18 @@
 version: '3'
 services:
-  server:
+  server_HTTP:
     restart: always
-    build: ./server
+    build: ./server_HTTP
     ports:
     - "8080:8080"
+    networks:
+    - server-tier
+
+  client_mobile:
+    restart: always
+    build: ./client_mobile
+    ports:
+    - "8081:8081"
     networks:
     - server-tier
 
