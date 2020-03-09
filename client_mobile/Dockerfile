@@ -23,6 +23,7 @@ COPY ./ ./
 
 RUN ./gradlew clean
 RUN ./gradlew assembleRelease
-RUN cp app/build/outputs/apk/release/app-release-unsigned.apk ./client.apk
+RUN mkdir ./public_shared/
+RUN cp app/build/outputs/apk/release/app-release-unsigned.apk /public_shared/client.apk
 
 EXPOSE 8081
