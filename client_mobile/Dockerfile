@@ -26,3 +26,4 @@ COPY ./ ./
 
 CMD ["./gradlew", "clean"]
 CMD ["./gradlew", "assembleRelease"]
+CMD ["cp", "app/build/outputs/apk/release/app-release-unsigned.apk", "./"]

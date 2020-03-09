@@ -16,7 +16,7 @@ services:
     networks:
       - server-tier
     volumes:
-      - client-data:/client_mobile/
+      - client-data:/usr/src/DEV_area_2019_client_mobile/
 
   client_website:
     restart: always
@@ -29,7 +29,7 @@ services:
     networks:
       - server-tier
     volumes:
-      - client-data:/client_website/
+      - client-data:/usr/src/DEV_area_2019_client_website/
 
 networks:
   server-tier:
