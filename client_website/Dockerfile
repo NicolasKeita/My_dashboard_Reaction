@@ -1,4 +1,4 @@
-FROM node:12.2.0-alpine
+FROM node:12.14.1
 
 WORKDIR /usr/src/DEV_area_2019_client_website
 
@@ -7,5 +7,5 @@ COPY package-lock.json ./
 RUN npm install
 COPY ./ ./
 
-EXPOSE 8000
+EXPOSE 8081
 CMD ["npm", "start"]
