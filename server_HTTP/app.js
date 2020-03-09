@@ -4,6 +4,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const body = require('body-parser');
+const path = require('path');
 
 const indexRouter = require('./routes/index');
 const trelloRouter = require('./routes/trello');
@@ -32,6 +33,7 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(body.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "./public/")));
 
 app.use('/', indexRouter);
 app.use('/trello', trelloRouter);
