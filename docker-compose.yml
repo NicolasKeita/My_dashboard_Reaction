@@ -1,6 +1,6 @@
 version: '3'
 services:
-  server_HTTP:
+  server_http:
     restart: always
     build: ./server_HTTP
     ports:
@@ -9,7 +9,7 @@ services:
     - server-tier
 
   client_mobile:
-    restart: always
+    restart: on-failure
     build: ./client_mobile
     ports:
     - "8081:8081"

@@ -19,5 +19,10 @@ RUN $ANDROID_HOME/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSIO
     "platforms;android-${ANDROID_VERSION}" \
     "platform-tools"
 
-RUN mkdir /application
-WORKDIR /application
+RUN mkdir /usr/src/DEV_area_2019_client_mobile/
+WORKDIR /usr/src/DEV_area_2019_client_mobile/
+
+COPY ./ ./
+
+CMD ["./gradlew", "clean"]
+CMD ["./gradlew", "assembleRelease"]
