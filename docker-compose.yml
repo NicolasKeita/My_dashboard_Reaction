@@ -13,8 +13,6 @@ services:
     build: ./client_mobile/
     depends_on:
       - server_http
-    ports:
-      - "8081:8081"
     networks:
       - server-tier
     volumes:

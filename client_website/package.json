@@ -18,12 +18,12 @@
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
-    "start": "PORT=8080 react-scripts start",
+    "start": "PORT=8081 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3000/",
+  "proxy": "http://localhost:8081/",
   "eslintConfig": {
     "extends": "react-app"
   },
