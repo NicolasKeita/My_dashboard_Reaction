@@ -4,9 +4,7 @@ import Routes from "./Routes";
 
 import "./App.css";
 
-function App(props) {
-
-
+function App() {
   return (
     <div className="App container">
         <Routes/>
