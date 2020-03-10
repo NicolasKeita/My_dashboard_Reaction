@@ -12,7 +12,7 @@ router.post('/', async function (req, res) {
     // works with x-www-form-urlencoded but not with form-data
     const json_request_body = JSON.parse(JSON.stringify(req.body));
     let messageToSend = json_request_body.messageToSend;
-    let subject_of_the_mail = json_request_body.mail_subject;
+    let subject_of_the_mail = json_request_body.subject_of_the_mail;
     let receiver_mail = json_request_body.receiver_mail;
 
     if (messageToSend === undefined)

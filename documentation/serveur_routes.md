@@ -32,6 +32,7 @@ Additional data can be attached to the request :
 
 - city
 - send_mail
+- receiver_mail
 
 Example :
 
@@ -40,6 +41,9 @@ VALUE : "Paris"
 
 KEY : send_mail
 VALUE : "true"
+
+KEY : receiver_mail
+VALUE : nicolaskeita2@gmail.com
 
 NOTE : sur Postman il faut remplir le Body de la requete avec `x-www-form-urlencoded` plutot que `form-data`.
 Si vous souhaitez vraiment utiliser`form-data`, vous pouvez améliorer le fichier send-mail.js dans serveur_HTTP/routes/
