@@ -38,14 +38,13 @@ router.post('/', async function (req, res) {
         html: messageToSend // html body
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
+    await transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             res.send(error);
             return console.log(error);
         }
-        console.log('Message %s sent: %s', info.messageId, info.response);
-        res.render('index');
     });
+    await res.end("Mail sent to " + receiver_mail + " ! It takes a few seconds to send.");
 });
 
 module.exports = router;
