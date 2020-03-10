@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .add("password", passwd)
                         .build();
                 final Request request = new Request.Builder()
-                        .url("http://10.0.2.2:3000/users")
+                        .url("http://10.0.2.2:8080/users")
                         .post(formBody)
                         .build();
                 Response response;
