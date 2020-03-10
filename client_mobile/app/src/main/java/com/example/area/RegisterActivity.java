@@ -77,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     .add("password", passwd)
                     .build();
             Request request = new Request.Builder()
-                    .url("http://10.0.2.2:3000/register")
+                    .url("http://10.0.2.2:8080/register")
                     .post(formBody)
                     .build();
             Response response = null;

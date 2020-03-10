@@ -33,7 +33,7 @@ public class MarsActivity extends AppCompatActivity implements View.OnClickListe
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/mars")
+                .url("http://10.0.2.2:8080/mars")
                 .build();
         Response response = null;
         try {
