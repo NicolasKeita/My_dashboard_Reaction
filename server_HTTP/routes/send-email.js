@@ -8,6 +8,7 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', async function (req, res) {
+    console.log("[DEBUG] You want to send a mail !");
     // works with x-www-form-urlencoded but not with form-data
     const json_request_body = JSON.parse(JSON.stringify(req.body));
     let messageToSend = json_request_body.messageToSend;
