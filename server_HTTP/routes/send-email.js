@@ -1,25 +1,41 @@
 const express = require('express');
 const router = express.Router();
-const request = require('request');
 const nodeMailer = require('nodemailer');
 
+router.get('/', function (req, res) {
+    res.end("You probably wanted to access this route with a POST request." +
+        "This is currently a GET request.");
+});
 
-router.post('/', function (req, res) {
+router.post('/', async function (req, res) {
+    // works with x-www-form-urlencoded but not with form-data
+    const json_request_body = JSON.parse(JSON.stringify(req.body));
+    let messageToSend = json_request_body.messageToSend;
+    let subject_of_the_mail = json_request_body.mail_subject;
+    let receiver_mail = json_request_body.receiver_mail;
+
+    if (messageToSend === undefined)
+        messageToSend = "empty message from DEV_area_2019";
+    if (subject_of_the_mail === undefined)
+        subject_of_the_mail = "empty subject from DEV_area_2019";
+    if (receiver_mail === undefined)
+        receiver_mail = "nicolaskeita2@gmail.com";
+
     let transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
-        /*auth: {
-            user: 'louis.druo@gmail.com',
-            pass: 'Furet9292'
-        }*/
+        auth: {
+            user: 'nicolasdevarea2019@gmail.com',
+            pass: 'DEV_area_2019'
+        }
     });
     let mailOptions = {
         from: '"Hugo lacour" <louis.druo@gmail.com>', // sender address
-        to: 'hlacour49@gmail.com', // list of receivers
-        subject: "test", // Subject line
+        to: receiver_mail,
+        subject: subject_of_the_mail, // Subject line
         text: "hello", // plain text body
-        html: '<b>NodeJS Email Tutorial</b>' // html body
+        html: messageToSend // html body
     };
 
     transporter.sendMail(mailOptions, (error, info) => {

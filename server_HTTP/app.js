@@ -32,6 +32,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+app.use(body.json());
 app.use(body.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "./public/")));
 
