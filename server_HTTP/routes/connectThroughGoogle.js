@@ -51,7 +51,7 @@ function getAuthenticatedClient() {
                         console.info('Tokens acquired.');
                         resolve(oAuth2Client);
                     } else {
-                        console.log("[ERR DASHBOARD] Wrong URL in connectThroughGoogle.js line 70");
+                        console.log("[ERR DEV_AREA_2019] Wrong URL in connectThroughGoogle.js line 70");
                     }
                 } catch (e) {
                     reject(e);
