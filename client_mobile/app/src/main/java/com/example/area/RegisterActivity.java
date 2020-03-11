@@ -32,9 +32,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        editTextMail = (EditText) findViewById(R.id.editTextMail);
-        editTextMdp = (EditText) findViewById(R.id.editTextMdp);
-        btnSubmit = (Button) findViewById(R.id.btnSubmit);
+        editTextMail = findViewById(R.id.editTextMail);
+        editTextMdp = findViewById(R.id.editTextMdp);
+        btnSubmit = findViewById(R.id.btnSubmit);
 
         btnSubmit.setOnClickListener(this);
     }

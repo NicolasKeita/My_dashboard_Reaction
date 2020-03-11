@@ -19,6 +19,7 @@ const steamNewsRouter = require('./routes/steamNews');
 const timeRouter = require('./routes/time');
 const usersRouter = require('./routes/users');
 const weatherRouter = require('./routes/weather');
+const connectThroughGoogleRouter = require('./routes/connectThroughGoogle');
 
 const app = express();
 
@@ -50,6 +51,7 @@ app.use('/steamNews', steamNewsRouter);
 app.use('/time', timeRouter);
 app.use('/users', usersRouter);
 app.use('/weather', weatherRouter);
+app.use('/connectThroughGoogle', connectThroughGoogleRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
