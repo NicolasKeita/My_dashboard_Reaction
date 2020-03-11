@@ -1,29 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const {OAuth2Client} = require('google-auth-library');
+const { OAuth2Client } = require('google-auth-library');
 const http = require('http');
 const url = require('url');
-const open = require('open');
 const destroyer = require('server-destroy');
-
-// Download your OAuth2 configuration from the Google
 const keys = require('../google_api_key_oauth2');
 
-router.get('/', async function(req, res) {
+router.get('/', async function(req, res)
+{
     const oAuth2Client = await getAuthenticatedClient();
-
-   // API call to fetch the username
-    const url = 'https://people.googleapis.com/v1/people/me?personFields=names';
-    const res2 = await oAuth2Client.request({url});
-    oAuth2Client.names = res2.data.names[0];
-
-    await res.end(JSON.stringify(oAuth2Client));
+    res.send(oAuth2Client);
 });
 
-router.post('/', async function(req, res, next) {
+router.post('/', async function(req, res) {
     res.end("You sent a POST request to connectThroughGoogle but you probably wanted to send a GET request");
 });
-
 
 /**
  * Create a new OAuth2Client, and go through the OAuth2 content
@@ -38,12 +29,6 @@ function getAuthenticatedClient() {
             keys.web.client_secret,
             keys.web.redirect_uris[0]
         );
-
-        // Generate the url that will be used for the consent dialog.
-        const authorizeUrl = oAuth2Client.generateAuthUrl({
-            access_type: 'offline',
-            scope: 'https://www.googleapis.com/auth/userinfo.profile',
-        });
 
         // Open an http www to accept the oauth callback. In this simple example, the
         // only request to our webserver is to /oauth2callback?code=<code>
@@ -73,8 +58,11 @@ function getAuthenticatedClient() {
                 }
             })
             .listen(3000, () => {
-                // open the browser to the authorize url to start the workflow
-                open(authorizeUrl, {wait: false}).then(cp => cp.unref());
+            })
+            .on('error', (e) => {
+                if (e.code === 'EADDRINUSE') {
+                    console.log('Address, port combination already in use');
+                }
             });
         destroyer(server);
     });

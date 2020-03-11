@@ -20,6 +20,7 @@ const timeRouter = require('./routes/time');
 const usersRouter = require('./routes/users');
 const weatherRouter = require('./routes/weather');
 const connectThroughGoogleRouter = require('./routes/connectThroughGoogle');
+const getURL_toConnectToGoogleRouter = require('./routes/getURL_toConnectToGoogle');
 
 const app = express();
 
@@ -52,6 +53,7 @@ app.use('/time', timeRouter);
 app.use('/users', usersRouter);
 app.use('/weather', weatherRouter);
 app.use('/connectThroughGoogle', connectThroughGoogleRouter);
+app.use('/getURL_toConnectToGoogle', getURL_toConnectToGoogleRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
