@@ -28,7 +28,7 @@ function handleSubmit() {
          console.log(res.data);
          setStr(res.data.weather[0].main)
      })
-     axios.get(('/pollution'), res => {
+     axios.get(('http://localhost:8080/pollution'), res => {
 
     }).then((res) => {
         console.log(res);

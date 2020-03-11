@@ -24,7 +24,7 @@ function handleSubmit() {
          setStr(res.data.title)
          setStr2(res.data.url)
      })
-     axios.get(('/mars'), res => {
+     axios.get(('http://localhost:8080/mars'), res => {
 
     }).then((res) => {
         console.log(res);

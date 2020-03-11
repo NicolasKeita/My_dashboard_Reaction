@@ -10,6 +10,7 @@ import Paris from "./containers/Paris"
 import Newyorktime from "./containers/Newyork"
 import Nasa from "./containers/Nasa"
 import Trello from "./containers/Trello"
+import Weather from "./containers/Weather"
 
 
 export default function Routes() {
@@ -23,8 +24,10 @@ export default function Routes() {
       <Route path="/Paris" component={Paris} />
       <Route path="/New-york-time" component={Newyorktime} />
       <Route path="/Nasa" component={Nasa} />
-      <Route path="/Trello" component={Trello} />
+      <Route path="/Weather" component={Weather} />
       <Route path="/Home" component={Home} />
+      <Route path="/Trello" component={Trello} />
+
     </Switch>
   );
 }
