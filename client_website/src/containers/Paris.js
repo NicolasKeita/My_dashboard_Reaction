@@ -20,7 +20,7 @@ export default function Paris(props) {
   // Met à jour le titre du document via l’API du navigateur
 });
 function handleSubmit() {
-      axios.get(('/weather'), res => {
+      axios.get(('http://localhost:8080/weather'), res => {
 
      })
      .then((res) => {

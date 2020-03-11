@@ -14,7 +14,7 @@ export default function Lol(props) {
   // Met à jour le titre du document via l’API du navigateur
 });
 function handleSubmit() {
-      axios.get(('/lol'), res => {
+      axios.get(('http://localhost:8080/lol'), res => {
 
      })
      .then((res) => {
