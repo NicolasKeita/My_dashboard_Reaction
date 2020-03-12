@@ -13,7 +13,7 @@ export default function Bitcoin(props) {
   // Met à jour le titre du document via l’API du navigateur
 });
 function handleSubmit() {
-      axios.get(('/bitcoin'), res => {
+      axios.get(('http://localhost:8080/bitcoin'), res => {
 
      })
      .then((res) => {

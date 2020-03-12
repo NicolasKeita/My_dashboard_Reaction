@@ -13,7 +13,7 @@ export default function Steam(props) {
   // Met à jour le titre du document via l’API du navigateur
 });
 function handleSubmit() {
-      axios.get(('/steamNews'), res => {
+      axios.get(('http://localhost:8080/steamNews'), res => {
 
      })
      .then((res) => {

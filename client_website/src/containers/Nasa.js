@@ -15,7 +15,7 @@ export default function Nasa(props) {
   // Met à jour le titre du document via l’API du navigateur
 });
 function handleSubmit() {
-      axios.get(('/pictures'), res => {
+      axios.get(('http://localhost:8080/pictures'), res => {
 
      })
      .then((res) => {
@@ -24,7 +24,7 @@ function handleSubmit() {
          setStr(res.data.title)
          setStr2(res.data.url)
      })
-     axios.get(('/mars'), res => {
+     axios.get(('http://localhost:8080/mars'), res => {
 
     }).then((res) => {
         console.log(res);

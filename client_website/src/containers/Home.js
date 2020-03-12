@@ -15,6 +15,7 @@ export default function Home() {
       <Button onClick={() => {window.location.href='/New-york-time'}}>New-york time</Button>
       <Button onClick={() => {window.location.href='/Nasa'}}>Nasa</Button>
       <Button onClick={() => {window.location.href='/Trello'}}>Trello</Button>
+      <Button onClick={() => {window.location.href='/Weather'}}>Weather</Button>
 
      {/* <Route path="/Bitcoin" component={Bitcoin} />
       <Route path="/Lol" component={Lol} />
