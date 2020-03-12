@@ -1,19 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const { OAuth2Client } = require('google-auth-library');
+const { google } = require('googleapis');
 const keys = require('../google_api_key_oauth2');
 
 router.get('/', async function(req, res)
 {
-    const oAuth2Client = new OAuth2Client(
+    const oAuth2Client = new google.auth.OAuth2(
         keys.web.client_id,
         keys.web.client_secret,
         keys.web.redirect_uris[0]
     );
 
+    // generate a url that asks permissions for People API, Blogger and Google Calendar scopes
+    const scopes = [
+        'https://www.googleapis.com/auth/blogger',
+        'https://www.googleapis.com/auth/calendar',
+        'https://www.googleapis.com/auth/userinfo.profile',
+        'https://www.googleapis.com/auth/drive.appdata',
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/drive'
+    ];
+
     const url = oAuth2Client.generateAuthUrl({
         access_type: 'offline',
-        scope: 'https://www.googleapis.com/auth/userinfo.profile',
+        scope: scopes,
     });
     res.send(url);
 });

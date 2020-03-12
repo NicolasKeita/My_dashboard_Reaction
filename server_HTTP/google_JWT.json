@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dashboard-nico-259202",
+  "private_key_id": "36516917f59a187d6ea0cf83bf2bd3970ba32b3a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDOWHSwH9newXXv\nP4mmVdc9A9zpTsc4o7+EvIhAMOgWRs0ScoIm/zuuMVOdy6bxEr10gOClpdPsTWzb\nZpf0ObbtxZiO8WS6rGs2Bq03QbQuyqY7hZ0P8FMm6uvHpPTSdYLLptjrdTlS1lDD\nm/71uSKBxy7MS+o7/QUAxVR3V6bqCVhYdBB/E/yWGCdvbZ7rhjy2ypaJaFXnRqRK\nYp1eE/47CmAUjgVmQ/X9vEA/4xRYdLZXN2j3H00esnlXc3hPi0PjsRmj43g4Lji1\nspkayvgZH4paSgS2ztDLo/m7/BsR9yCR3proFgETuxPUihVspn+pIYArel55KGjr\noPE6+u9hAgMBAAECggEABvlYYEeDTpMNUFu+ZD/MeYRy5/PAqfpm066nkDvW7EHS\nVohGO9kuhDGomNG0P7uZaaGddhvHsNnhDv1Fr3xv4VNnV5VzCRggu3+4RQDUfSxe\nN+7JIyvFM7CG7YV2vNI57HYkKLkaieEyc5oHIPjz4J0ByOfb79EaZS9GLo5o1soQ\ngYeMLF8qhVJqGO6/q+Yus+w38VGST+nP1SmNeRS9Ynkjpcj+9/NzfTR/06BAc48M\nMPmL8Vxkfmu+aCHDXC7m5pBAmqUtc6seHnFD3UcSy+6PnV58KyO4YKPJc+7w4U7K\nlXR0jb3e2YcglOlcenV2gkA/DxBVdkMeDOUDEguX0QKBgQDzbYvdnmz7ApIkC/Xl\nM3a2+FbhQO0I3dcOiWlmzIntrSdYIbCSlgKIDqHC+JpQapWjLtKy5As8t+G52enk\nhZHVtS4CXCB4St7mQBg2dYXsWM6s9mJEkNbEd7gXwuEcRy6QEhMErp6ouqI6ATPi\nJzvoI8zhiAR7stq0IqilZpIQpQKBgQDZAKEJ24cepRk1RvAzdffgHKe7k+SiC2Lm\nqOOkhfUIq6URjNpbPgEAwTimo9nrXMQssolbtH+uh9ez1OSYEktdI2Yte5CY94e/\nYeksJZDa3LTGSICYUXAv4i0OgIO6dUujxZkx4c+Tl6BK+DZBn5J4HgjEKi0gxRSw\n+DuuSyULDQKBgCbGMTwoywUkgLC7MvzCOMumPPh+RgNeiq3nF2HnfKTeKuEv5JdE\ny7xuUDflL3dVsuYeRDN4fY27YHohCs96syMOS/jWQdnHWz/jv7eU+rMN5kXIrRhs\n1bjPtQQb542AjRsntd3ODrmjmMmSfXgtda5hXXYjG0u0zn9Y8fH+p499AoGAbazO\nt2+3i/p/khjHYAr4e9GfyMNHo8rDcrbbTxTRMk+mPweEeOcOlLYTjs1zX2xkTf7y\nQ2InwiswDtjDrERayLkSdFxmSZmZh1XSBpj57FPuHeUY8WL/o4PZp+G2MjAEScKd\n2cM6KWtR/XIT4fjni0QKxDJY2p4hBgyABWg/UaUCgYEAgQ1FA69S2LX5EINjWg4P\nLJ5mOS+pTDzZC1Ojt5VRFrsaW3JMjrhh7x5cS32P9eD6DrjybMtfByzBAH+VcdQP\n6JSVcZvi+YGqcNz33e0Mwroz4Ir+atg0KCXQ3m/B4SIKKt7GifiQLh4RXNs/s5TC\nYtqxcrErsdYnYEI1yQgEqzA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dev-area-2019-nico@dashboard-nico-259202.iam.gserviceaccount.com",
+  "client_id": "113297657859173163000",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dev-area-2019-nico%40dashboard-nico-259202.iam.gserviceaccount.com"
+}
