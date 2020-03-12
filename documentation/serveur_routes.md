@@ -64,6 +64,30 @@ You can open it manually to see what it's like but you probably want to **automa
 
 GET request to the server at route /connectThroughGoogle (**localhost:8080/connectThroughGoogle**)
 
-EXPECTED RESPONSE : json filled with credentials (an access token) to access to Google APIs.
+EXPECTED RESPONSE : json filled with credentials (60min access token) to access to Google APIs.
 
 
+### *GoogleAPIgetPhoneNumber:*
+
+POST request to the server at route /GoogleAPIgetPhoneNumber (**localhost:8080/GoogleAPIgetPhoneNumber**)
+
+You MUST send additionnal param through `x-www-form-urlencoded` (not `form-data`)
+
+- google_auth_tokens
+
+EXEMPLE :
+
+KEY : google_auth_tokens
+VALUE : `"
+{
+  
+    "access_token":"ya29.a0AdkokXbX9t65gvf7k2OlU",
+    "scope":"https://www.googleapis.com/auth/profile.emails.read",
+    "token_type":"Bearer",
+    "id_token": "iJKCfjdffzfeunfzoeddzdzedzednzo",
+    "expiry_date":1584000037281}
+}`
+
+EXPECTED RESPONSE : user's phone number
+
+NOTE : google_auth_tokens is the response you got from `/connectThroughGoogle`

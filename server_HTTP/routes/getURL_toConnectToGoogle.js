@@ -11,14 +11,30 @@ router.get('/', async function(req, res)
         keys.web.redirect_uris[0]
     );
 
-    // generate a url that asks permissions for People API, Blogger and Google Calendar scopes
+    // TODO remove unnecessary ones
+    // Choosing which API we need
     const scopes = [
         'https://www.googleapis.com/auth/blogger',
         'https://www.googleapis.com/auth/calendar',
-        'https://www.googleapis.com/auth/userinfo.profile',
         'https://www.googleapis.com/auth/drive.appdata',
         'https://www.googleapis.com/auth/drive.file',
-        'https://www.googleapis.com/auth/drive'
+        'https://www.googleapis.com/auth/drive',
+
+        'https://www.googleapis.com/auth/userinfo.profile', // Public Info Google PEOPLE API
+
+        // Private infos Google PEOPLE API
+        'https://www.googleapis.com/auth/contacts',
+        'https://www.googleapis.com/auth/contacts.readonly',
+        'https://www.googleapis.com/auth/profile.agerange.read',
+        'https://www.googleapis.com/auth/profile.emails.read',
+        'https://www.googleapis.com/auth/profile.language.read',
+        'https://www.googleapis.com/auth/user.addresses.read',
+        'https://www.googleapis.com/auth/user.birthday.read',
+        'https://www.googleapis.com/auth/user.emails.read',
+        'https://www.googleapis.com/auth/user.organization.read',
+        'https://www.googleapis.com/auth/user.phonenumbers.read',
+        'https://www.googleapis.com/auth/userinfo.email',
+        'https://www.googleapis.com/auth/userinfo.profile'
     ];
 
     const url = oAuth2Client.generateAuthUrl({
