@@ -90,4 +90,6 @@ VALUE : `"
 
 EXPECTED RESPONSE : user's phone number
 
-NOTE : google_auth_tokens is the response you got from `/connectThroughGoogle`
+NOTE : 
+- google_auth_tokens is the response you got from `/connectThroughGoogle`
+- I think you need to convert google_auth_tokens json to string before sending it. Try both then edit this message with the correct format.
