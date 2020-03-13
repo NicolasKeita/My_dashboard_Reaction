@@ -9,7 +9,6 @@ const keys = require('../google_api_key_oauth2');
 router.get('/', async function(req, res)
 {
     const auth_tokens = await getAuthenticatedClient();
-    //const oAuth2Client = await getAuthenticatedClient();
     res.send(auth_tokens);
 });
 

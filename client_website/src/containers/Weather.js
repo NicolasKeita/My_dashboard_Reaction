@@ -8,7 +8,7 @@ import axios from 'axios';
 export default function Weather(props) {
   const [city, setCity] = useState("loading");
   //const [send_mail, setMail1] = useState("true");
-  const send_mail = "true"
+  const send_mail = "true";
   const [receiver_mail, setMail2] = useState("loading");
 
 
@@ -42,10 +42,6 @@ function handleSubmit() {
                 />*/}
             <TextField id="receiver_mail" label="receiver_mail" onChange={input => handleChangeMail2(input.target.value)}/>
             <Button onClick={handleSubmit}>Submit</Button>
-
-
-
-
     </div>
   );
 }

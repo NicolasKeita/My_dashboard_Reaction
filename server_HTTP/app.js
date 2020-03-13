@@ -22,6 +22,7 @@ const weatherRouter = require('./routes/weather');
 const connectThroughGoogleRouter = require('./routes/connectThroughGoogle');
 const getURL_toConnectToGoogleRouter = require('./routes/getURL_toConnectToGoogle');
 const GoogleAPIgetPhoneNumberRouter = require('./routes/GoogleAPIgetPhoneNumber');
+const isStreamingRouter = require('./routes/isStreaming');
 
 const app = express();
 
@@ -72,6 +73,7 @@ app.use('/weather', weatherRouter);
 app.use('/connectThroughGoogle', connectThroughGoogleRouter);
 app.use('/getURL_toConnectToGoogle', getURL_toConnectToGoogleRouter);
 app.use('/GoogleAPIgetPhoneNumber', GoogleAPIgetPhoneNumberRouter);
+app.use('/isStreaming', isStreamingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
