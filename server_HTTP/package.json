@@ -34,7 +34,8 @@
     "request": "^2.88.2",
     "server-destroy": "^1.0.1",
     "sync-mysql": "^3.0.1",
-    "unirest": "^0.6.0"
+    "unirest": "^0.6.0",
+    "youtube-streamer": "^2.0.1"
   },
   "devDependencies": {
     "@firebase/util": "^0.2.41",

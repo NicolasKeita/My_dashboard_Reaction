@@ -34,7 +34,12 @@ router.get('/', async function(req, res)
         'https://www.googleapis.com/auth/user.organization.read',
         'https://www.googleapis.com/auth/user.phonenumbers.read',
         'https://www.googleapis.com/auth/userinfo.email',
-        'https://www.googleapis.com/auth/userinfo.profile'
+        'https://www.googleapis.com/auth/userinfo.profile',
+
+        // Youtube API
+        'https://www.googleapis.com/auth/youtube.readonly',
+        'https://www.googleapis.com/auth/youtube',
+        'https://www.googleapis.com/auth/youtube.force-ssl'
     ];
 
     const url = oAuth2Client.generateAuthUrl({
