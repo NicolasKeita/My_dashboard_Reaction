@@ -39,7 +39,7 @@ public class TrelloActivity extends AppCompatActivity implements View.OnClickLis
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/trello")
+                .url("http://10.0.2.2:8080/trello")
                 .build();
         Response response;
         try {

@@ -21,6 +21,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private Button launchNasa;
     private Button launchMars;
     private Button launchTrello;
+    private Button connectGoogle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         launchNasa = (Button) findViewById(R.id.buttonNasa);
         launchMars = (Button) findViewById(R.id.buttonMars);
         launchTrello = (Button) findViewById(R.id.buttonTrello);
+        connectGoogle = (Button) findViewById(R.id.connectGoogle);
 
         launchNasa.setOnClickListener(this);
         launchTrello.setOnClickListener(this);
@@ -48,6 +50,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         launchWeather.setOnClickListener(this);
         launchPollution.setOnClickListener(this);
         launchSteam.setOnClickListener(this);
+        connectGoogle.setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +81,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             this.startActivity(intentArea);
         } else if (v == launchTrello) {
             Intent intentArea = new Intent(this, TrelloActivity.class);
+            this.startActivity(intentArea);
+        } else if (v == connectGoogle) {
+            Intent intentArea = new Intent(this, GoogleActivity.class);
             this.startActivity(intentArea);
         }
     }

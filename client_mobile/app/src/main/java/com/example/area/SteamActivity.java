@@ -45,7 +45,7 @@ public class SteamActivity extends AppCompatActivity implements View.OnClickList
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/steamNews")
+                .url("http://10.0.2.2:8080/steamNews")
                 .build();
         Response response;
         try {

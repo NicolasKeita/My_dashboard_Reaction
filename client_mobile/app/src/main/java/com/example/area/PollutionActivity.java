@@ -37,7 +37,7 @@ public class PollutionActivity extends AppCompatActivity implements View.OnClick
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/pollution")
+                .url("http://10.0.2.2:8080/pollution")
                 .build();
         Response response = null;
         try {

@@ -31,7 +31,7 @@ public class NYActivity extends AppCompatActivity implements View.OnClickListene
 
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:3000/time")
+                .url("http://10.0.2.2:8080/time")
                 .build();
         Response response = null;
         try {
