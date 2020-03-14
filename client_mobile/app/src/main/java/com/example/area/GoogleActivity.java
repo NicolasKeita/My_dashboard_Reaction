@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,50 +31,46 @@ public class GoogleActivity extends AppCompatActivity implements View.OnClickLis
         setSupportActionBar(toolbar);
         final OkHttpClient httpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url("http://10.0.2.2:8080/getURL_toConnectToGoogle")
+                .url("http://10.0.2.2:8080/connectThroughGoogle")
                 .build();
         Response response;
-        try {
-            response = httpClient.newCall(request).execute();
-            OkHttpClient httpClient2 = new OkHttpClient();
-            Request request2 = new Request.Builder()
-                    .url("http://10.0.2.2:8080/connectThroughGoogle")
-                    .build();
-            Response response2 = httpClient.newCall(request).execute();
-            String jsonData = Objects.requireNonNull(response2.body()).string();
-            JSONObject object = new JSONObject(jsonData);
-        } catch (Exception ignored) {
-        }
         Thread t=new Thread(){
-
-
             @Override
             public void run(){
                 while(!isInterrupted()){
-                    try {
-                        Thread.sleep(60000);  //1000ms = 1 sec
-                        runOnUiThread(new Runnable() {
-
-                            @Override
-                            public void run() {
-                                //request
-                                try {
-                                   /* Response response = httpClient.newCall(request).execute();
-                                    String jsonData = response.body().string();
-                                    JSONObject object = new JSONObject(jsonData);*/
-                                } catch (Exception ignored) {
-                                }
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                Response response = httpClient.newCall(request).execute();
+                            } catch (Exception ignored) {
                             }
-                        });
-
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                        }
+                    });
 
                 }
             }
         };
         t.start();
+        try {
+            OkHttpClient httpClient2 = new OkHttpClient();
+            Request request2 = new Request.Builder()
+                    .url("http://10.0.2.2:8080/getURL_toConnectToGoogle")
+                    .build();
+            Response response2 = httpClient.newCall(request2).execute();
+            String url = response2.toString();
+            Toast.makeText(getApplicationContext(), url, Toast.LENGTH_LONG).show();
+            OkHttpClient httpClient3 = new OkHttpClient();
+            Request request3 = new Request.Builder()
+                    .url(url)
+                    .build();
+            Response response3 = httpClient.newCall(request3).execute();
+
+            /*String jsonData = Objects.requireNonNull(response2.body()).string();
+            JSONObject object = new JSONObject(jsonData);*/
+        } catch (Exception ignored) {
+        }
+
     }
 
     @Override
