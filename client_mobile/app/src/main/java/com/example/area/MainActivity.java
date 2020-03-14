@@ -1,8 +1,10 @@
 package com.example.area;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -14,6 +16,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -67,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onClick(View v) {
         if (v == btnRegister) {
@@ -91,15 +96,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .url("http://10.0.2.2:8080/users")
                         .post(formBody)
                         .build();
-                Response response;
 
+
+                // TODO remove for production
+                Toast.makeText(getApplicationContext(), "CONNECTED", Toast.LENGTH_SHORT).show();
+                Intent intentArea2 = new Intent(this, SecondActivity.class);
+                this.startActivity(intentArea2);
+
+                // TODO remove commentaries during production
+                /*
                 try {
-                        //textView.setText("Before exec");
-                        response = httpClient.newCall(request).execute();
+                    //textView.setText("Before exec");
+                        Response response = httpClient.newCall(request).execute();
                         //textView.setText("After exec");
                         //Thread.sleep(5000);
                         //textView.setText(response.body().string());
-                        if ("succes".equals(response.body().string())) {
+                        if ("succes".equals(Objects.requireNonNull(response.body()).string())) {
                             Toast.makeText(getApplicationContext(), "CONNECTED", Toast.LENGTH_SHORT).show();
                             Intent intentArea = new Intent(this, SecondActivity.class);
                             this.startActivity(intentArea);
@@ -110,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         e.printStackTrace();
                         Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
                     }
-
+                    */
             }
         }
     }

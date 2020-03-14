@@ -5,8 +5,8 @@ const _checkLogin = async (email, password) => {
 		fire
 			.auth()
 			.signInWithEmailAndPassword(email, password)
-			.then(() => {return "succes"})
-			.catch(error => {return "error"} )
+			.then( () => { return "succes"; } )
+			.catch( error => { return "error"; } )
 	)
 };
 

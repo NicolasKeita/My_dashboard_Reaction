@@ -30,16 +30,16 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        launchBitcoin = (Button) findViewById(R.id.buttonBitcoin);
-        launchLol = (Button) findViewById(R.id.buttonLol);
-        launchNY = (Button) findViewById(R.id.buttonNY);
-        launchWeather = (Button) findViewById(R.id.buttonWeather);
-        launchPollution = (Button) findViewById(R.id.buttonPollution);
-        launchSteam = (Button) findViewById(R.id.buttonSteam);
-        launchNasa = (Button) findViewById(R.id.buttonNasa);
-        launchMars = (Button) findViewById(R.id.buttonMars);
-        launchTrello = (Button) findViewById(R.id.buttonTrello);
-        connectGoogle = (Button) findViewById(R.id.connectGoogle);
+        launchBitcoin = findViewById(R.id.buttonBitcoin);
+        launchLol = findViewById(R.id.buttonLol);
+        launchNY = findViewById(R.id.buttonNY);
+        launchWeather = findViewById(R.id.buttonWeather);
+        launchPollution = findViewById(R.id.buttonPollution);
+        launchSteam = findViewById(R.id.buttonSteam);
+        launchNasa = findViewById(R.id.buttonNasa);
+        launchMars = findViewById(R.id.buttonMars);
+        launchTrello = findViewById(R.id.buttonTrello);
+        connectGoogle = findViewById(R.id.connectGoogle);
 
         launchNasa.setOnClickListener(this);
         launchTrello.setOnClickListener(this);

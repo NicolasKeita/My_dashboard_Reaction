@@ -1,6 +1,7 @@
 package com.example.area;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.Menu;
@@ -10,8 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.util.Objects;
 
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -60,6 +64,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         return super.onOptionsItemSelected(item);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onClick(View v) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -80,12 +85,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     .url("http://10.0.2.2:8080/register")
                     .post(formBody)
                     .build();
-            Response response = null;
 
             try {
-                response = httpClient.newCall(request).execute();
+                Response response = httpClient.newCall(request).execute();
                 //Toast.makeText(getApplicationContext(), response.body().string(), Toast.LENGTH_SHORT).show();
-                if ("succes".equals(response.body().string())) {
+                if ("succes".equals(Objects.requireNonNull(response.body()).string())) {
                     Toast.makeText(getApplicationContext(), "ACCOUNT CREATED", Toast.LENGTH_SHORT).show();
                     Intent intentArea = new Intent(this, MainActivity.class);
                     this.startActivity(intentArea);
