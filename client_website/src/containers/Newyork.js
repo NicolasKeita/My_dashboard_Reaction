@@ -15,7 +15,7 @@ export default function Newyork(props) {
   // Met à jour le titre du document via l’API du navigateur
 });
 function handleSubmit() {
-      axios.get(('/time'), res => {
+      axios.get(('http://localhost:8080/time'), res => {
 
      })
      .then((res) => {

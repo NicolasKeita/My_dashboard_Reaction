@@ -14,7 +14,7 @@ export default function Trello(props) {
   // Met à jour le titre du document via l’API du navigateur
 });
 function handleSubmit() {
-      axios.get(('/trello'), res => {
+      axios.get(('http://localhost:8080/trello'), res => {
 
      })
      .then((res) => {

@@ -32,7 +32,7 @@ router.post('/', async function (req, res) {
         }
     });
     let mailOptions = {
-        from: '"Hugo lacour" <louis.druo@gmail.com>', // sender address
+        from: '"DEV_AREA_2019" <nicolasdevarea2019@gmail.com>', // sender address
         to: receiver_mail,
         subject: subject_of_the_mail, // Subject line
         text: "hello", // plain text body

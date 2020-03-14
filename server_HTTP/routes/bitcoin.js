@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const unirest = require("unirest");
 
-
 router.get('/', (req, res) => {
     const reqB = unirest("GET", "https://bravenewcoin-v1.p.rapidapi.com/convert");
 

@@ -15,7 +15,7 @@ export default function Register(props) {
   function handleSubmit(event) {
       console.log("lol")
       return (
-      axios.post('/register', {
+      axios.post('http://localhost:8080/register', {
           email: email,
           password: password
        })
