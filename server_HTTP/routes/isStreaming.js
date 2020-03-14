@@ -40,7 +40,7 @@ router.post('/',async function(req, res) {
     //let gapi = new google.youtube();
 //    gapi.client.youtube.liveStreams;
 
-    res.end("received POST request at /isStreaming");
+    res.end("received POST request at /isStreaming. Everything is OK");
 });
 
 module.exports = router;
