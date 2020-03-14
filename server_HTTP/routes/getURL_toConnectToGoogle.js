@@ -16,11 +16,6 @@ router.get('/', async function(req, res)
     const scopes = [
         'https://www.googleapis.com/auth/blogger',
         'https://www.googleapis.com/auth/calendar',
-        'https://www.googleapis.com/auth/drive.appdata',
-        'https://www.googleapis.com/auth/drive.file',
-        'https://www.googleapis.com/auth/drive',
-
-        'https://www.googleapis.com/auth/userinfo.profile', // Public Info Google PEOPLE API
 
         // Private infos Google PEOPLE API
         'https://www.googleapis.com/auth/contacts',
@@ -39,7 +34,12 @@ router.get('/', async function(req, res)
         // Youtube API
         'https://www.googleapis.com/auth/youtube.readonly',
         'https://www.googleapis.com/auth/youtube',
-        'https://www.googleapis.com/auth/youtube.force-ssl'
+        'https://www.googleapis.com/auth/youtube.force-ssl',
+
+        // Google Drive API
+        'https://www.googleapis.com/auth/drive.appdata',
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/drive'
     ];
 
     const url = oAuth2Client.generateAuthUrl({

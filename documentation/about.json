@@ -18,8 +18,8 @@
         "description": "User creates a new board"
       }],
       "reactions": [{
-        "name": "receive_information_mail",
-        "description": "The user receives an information email."
+        "name": "google_drive_create_text_file",
+        "description": "Users automatically creates a text file with information"
       }]
     },
     {

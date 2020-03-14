@@ -18,12 +18,30 @@ router.post('/', async function(req, res)
     );
     oAuth2Client.setCredentials(tokens);
 
-    const url = 'https://people.googleapis.com/v1/people/me?personFields=phoneNumbers';
-    const res2 = await oAuth2Client.request({url});
-    if (res2.data.phoneNumbers[0].value)
-        res.send(res2.data.phoneNumbers[0].value);
-    else
-        res.send("ERROR No phone Number detected");
+    let textToWrite = req.body.textToWrite;
+    let filename = req.body.filename;
+
+    if (textToWrite === undefined)
+        textToWrite = "Hello world";
+    if (filename === undefined)
+        filename = "Test DEV_AREA";
+
+    const drive = google.drive({
+        version: 'v3',
+        auth: oAuth2Client
+    });
+
+    await drive.files.create({
+        requestBody: {
+            name: filename,
+            mimeType: 'text/plain'
+        },
+        media: {
+            mimeType: 'text/plain',
+            body: textToWrite
+        }
+    });
+    res.end("File created !");
 });
 
 module.exports = router;
