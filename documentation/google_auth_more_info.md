@@ -17,7 +17,7 @@ Puis ensuite :
 `adb root`
 `adb remount`
 `adb pull /etc/hosts`
-`vim hosts`
+`vim hosts` (mettre 10.0.2.2 plutot que 127.0.0.1)
 `adb push hosts /etc/hosts`
 
 Une fois le fichier modifié push, vous pouvez build & run via Android Studio l’app mais il dabord avoir l’emulateur de lancé (via le script).
