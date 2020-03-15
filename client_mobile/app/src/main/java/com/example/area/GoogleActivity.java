@@ -1,6 +1,5 @@
 package com.example.area;
 
-//import android.icu.util.TimeUnit;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -8,28 +7,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
-import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class GoogleActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class GoogleActivity extends AppCompatActivity implements View.OnClickListener
+{
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +44,7 @@ public class GoogleActivity extends AppCompatActivity implements View.OnClickLis
                 Response response = call.execute();
                 RES_url_getURL_toConnectToGoogle = Objects.requireNonNull(response.body()).string();
             } catch (Exception e) {
+                System.err.println("Is the server Online ?");
                 System.err.println(e.toString());
             }
 
@@ -73,6 +68,7 @@ public class GoogleActivity extends AppCompatActivity implements View.OnClickLis
                     System.out.println("Credentials to google to GOOGLE APIs : ");
                     System.out.println(jsonData); // TODO : put those credentials in global to use them in future requests
                 } catch (Exception e) {
+                    System.err.println("Is the server Online ?");
                     System.err.println(e.toString());
                 }
             }

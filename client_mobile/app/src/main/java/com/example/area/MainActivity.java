@@ -97,32 +97,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .post(formBody)
                         .build();
 
-
-                // TODO remove for production
-                Toast.makeText(getApplicationContext(), "CONNECTED", Toast.LENGTH_SHORT).show();
-                Intent intentArea2 = new Intent(this, SecondActivity.class);
-                this.startActivity(intentArea2);
-
-                // TODO remove commentaries during production
-                /*
                 try {
-                    //textView.setText("Before exec");
-                        Response response = httpClient.newCall(request).execute();
-                        //textView.setText("After exec");
-                        //Thread.sleep(5000);
-                        //textView.setText(response.body().string());
-                        if ("succes".equals(Objects.requireNonNull(response.body()).string())) {
-                            Toast.makeText(getApplicationContext(), "CONNECTED", Toast.LENGTH_SHORT).show();
-                            Intent intentArea = new Intent(this, SecondActivity.class);
-                            this.startActivity(intentArea);
-                        } else {
-                            Toast.makeText(getApplicationContext(), "FALSE", Toast.LENGTH_SHORT).show();
-                        }
-                    } catch(Exception e) {
-                        e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
+                    Response response = httpClient.newCall(request).execute();
+                    if ("succes".equals(Objects.requireNonNull(response.body()).string())) {
+                        Toast.makeText(getApplicationContext(), "CONNECTED", Toast.LENGTH_SHORT).show();
+                        Intent intentArea = new Intent(this, SecondActivity.class);
+                        this.startActivity(intentArea);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "FALSE", Toast.LENGTH_SHORT).show();
                     }
-                    */
+                } catch(Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
+                }
             }
         }
     }
