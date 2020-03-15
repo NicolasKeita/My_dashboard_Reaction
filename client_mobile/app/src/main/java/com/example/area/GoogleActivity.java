@@ -1,6 +1,8 @@
 package com.example.area;
 
 //import android.icu.util.TimeUnit;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,7 +40,7 @@ public class GoogleActivity extends AppCompatActivity implements View.OnClickLis
 
         // First request to /getURL_toConnectToGoogle
         OkHttpClient httpClient = new OkHttpClient();
-        String REQ_url_getURL_toConnectToGoogle = "http://10.0.2.2:8080/getURL_toConnectToGoogle";
+        String REQ_url_getURL_toConnectToGoogle = "http://my-area-server2.com:8080/getURL_toConnectToGoogle";
         Request request = new Request.Builder()
                 .url(REQ_url_getURL_toConnectToGoogle)
                 .build();
@@ -50,50 +52,38 @@ public class GoogleActivity extends AppCompatActivity implements View.OnClickLis
             } catch (Exception e) {
                 System.err.println(e.toString());
             }
-            System.out.println("La reponse : " + RES_url_getURL_toConnectToGoogle); // TODO (Debug) Remove
 
-        // Second request to /getURL_toConnectToGoogle
-        OkHttpClient httpClient2 = new OkHttpClient.Builder()
-                .connectTimeout(10, TimeUnit.MINUTES)
-                .writeTimeout(10, TimeUnit.MINUTES)
-                .readTimeout(10, TimeUnit.MINUTES)
-                .build();
-        String REQ_url_connectThroughGoogle = "http://10.0.2.2:8080/connectThroughGoogle";
-        Request request2 = new Request.Builder()
-                .url(REQ_url_connectThroughGoogle)
-                .build();
-        Call call2 = httpClient2.newCall(request2);
-        try {
-            call2.enqueue(new Callback() {
-                @Override
-                public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                    e.printStackTrace();
+        Thread t = new Thread() {
+            public void run() {
+                try {
+                    // Second request to /getURL_toConnectToGoogle
+                    OkHttpClient httpClient2 = new OkHttpClient.Builder()
+                            .connectTimeout(10, TimeUnit.MINUTES)
+                            .writeTimeout(10, TimeUnit.MINUTES)
+                            .readTimeout(10, TimeUnit.MINUTES)
+                            .build();
+                    String REQ_url_connectThroughGoogle = "http://my-area-server2.com:8080/connectThroughGoogle";
+                    Request request2 = new Request.Builder()
+                            .url(REQ_url_connectThroughGoogle)
+                            .build();
+                    Call call2 = httpClient2.newCall(request2);
+                    Response response = call2.execute();
+                    String jsonData = Objects.requireNonNull(response.body()).string();
+                    JSONObject Jobject = new JSONObject(jsonData);
+                    System.out.println("Credentials to google to GOOGLE APIs : ");
+                    System.out.println(jsonData); // TODO : put those credentials in global to use them in future requests
+                } catch (Exception e) {
+                    System.err.println(e.toString());
                 }
+            }
+        };
+        t.start();
 
-                @Override
-                public void onResponse(@NotNull Call call, @NotNull final Response response) throws IOException {
-                    if (!response.isSuccessful()) {
-                        throw new IOException("unexpected code " + response);
-                    } else {
-                        System.out.println("Debut");
-                        System.out.println(response.body());
-                    }
-                }
-            });
-        } catch (Exception e) {
-            System.err.println(e.toString());
-        }
-            /*
-            String url = response2.toString();
-            Toast.makeText(getApplicationContext(), url, Toast.LENGTH_LONG).show();
-            OkHttpClient httpClient3 = new OkHttpClient();
-            Request request3 = new Request.Builder()
-                    .url(url)
-                    .build();
-            Response response3 = httpClient2.newCall(request3).execute();
-            */
-            /*String jsonData = Objects.requireNonNull(response2.body()).string();
-            JSONObject object = new JSONObject(jsonData);*/
+        // Open URL received
+        if (RES_url_getURL_toConnectToGoogle.equals(""))
+            System.err.println("[DEBUG AREA] REQUEST FAIL");
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(RES_url_getURL_toConnectToGoogle));
+        startActivity(browserIntent);
     }
 
     @Override

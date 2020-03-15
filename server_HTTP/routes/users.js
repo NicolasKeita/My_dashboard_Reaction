@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const  _checkLogin = require('../utils/connexion');
 
-router.post('/', async (req, res, next) => {
+router.post('/', async (req, res) => {
     const result = await _checkLogin(req.body.email, req.body.password);
     res.send(result);
 });
