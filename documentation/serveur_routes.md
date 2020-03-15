@@ -66,6 +66,8 @@ GET request to the server at route /connectThroughGoogle (**localhost:8080/conne
 
 EXPECTED RESPONSE : json filled with credentials (60min access token) to access to Google APIs.
 
+NOTE : this request holds until users authentificate to Google through the Page from `getURL_toConnectToConnectToGoogle`
+
 
 ### *GoogleAPIgetPhoneNumber:*
 
