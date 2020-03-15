@@ -11,6 +11,8 @@ import Newyorktime from "./containers/Newyork"
 import Nasa from "./containers/Nasa"
 import Trello from "./containers/Trello"
 import Weather from "./containers/Weather"
+import Google from "./containers/Google"
+
 
 
 export default function Routes() {
@@ -26,7 +28,9 @@ export default function Routes() {
       <Route path="/Nasa" component={Nasa} />
       <Route path="/Weather" component={Weather} />
       <Route path="/Home" component={Home} />
+      <Route path="/Google" component={Google} />
       <Route path="/Trello" component={Trello} />
+
 
     </Switch>
   );
