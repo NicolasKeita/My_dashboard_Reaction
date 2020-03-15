@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const aboutJsonFile = require('../../documentation/about');
+const aboutJsonFile = require('../about');
 
 router.post('/', function (req, res) {
     res.end("You probably wanted to do a GET request at /about.json instead of a POST request");

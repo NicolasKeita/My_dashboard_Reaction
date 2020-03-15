@@ -1,0 +1,120 @@
+{
+  "services": [
+    {
+      "name": "Friend Notification",
+      "actions": [{
+        "name": "phone_number_change",
+        "description": "User updated his phone number"
+      }],
+      "reactions": [{
+        "name": "send_mail_to_friend",
+        "description": "The user send emails to all his friends."
+      }]
+    },
+    {
+      "name": "Trello",
+      "actions": [{
+        "name": "board_creation",
+        "description": "User creates a new board"
+      }],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    },
+    {
+      "name": "Nasa pictures",
+      "actions": [{
+        "name": "picture_change",
+        "description": "Nasa updated a new picture. One new picture per day"
+      }],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    },
+    {
+      "name": "Planet Mars Information",
+      "actions": [{
+        "name": "weather_change",
+        "description": "Mars weather changed."
+      }],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    },
+    {
+      "name": "Weather",
+      "actions": [{
+        "name": "weather_change",
+        "description": "City's weather changed."
+      }],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    },
+    {
+      "name": "TimeZone information",
+      "actions": [{
+        "name": "midnight_timezone",
+        "description": "Requested Timezone reached midnight"
+      }],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    },
+    {
+      "name": "Pollution information",
+      "actions": [{
+        "name": "Pollution threshold",
+        "description": "Pollution indice reached threshold"
+      }],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    },
+    {
+      "name": "League of Legend",
+      "actions": [{
+        "name": "Server offline detection",
+        "description": "League of Legends' server went offline"
+      }],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    },
+    {
+      "name": "Steam",
+      "actions": [{
+        "name": "News",
+        "description": "New game or new Article appeared"
+      }],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    },
+    {
+      "name": "Bitcoin",
+      "actions": [
+        {
+          "name": "bitcoin_value_up",
+          "description": "Bitcoin value increased drastically"
+        },
+        {
+          "name": "bitcoin_value_down",
+          "description": "Bitcoin value dropped drastically"
+        }
+      ],
+      "reactions": [{
+        "name": "receive_information_mail",
+        "description": "The user receives an information email."
+      }]
+    }
+  ]
+}
