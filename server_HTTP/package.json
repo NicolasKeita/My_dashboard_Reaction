@@ -40,7 +40,7 @@
     "youtube-streamer": "^2.0.1"
   },
   "devDependencies": {
-    "@firebase/util": "^0.2.41",
+    "@firebase/util": "^0.3.4",
     "@types/express": "^4.17.3"
   }
 }
